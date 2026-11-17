@@ -1,0 +1,36 @@
+CREATE TABLE listen (
+    id TEXT NOT NULL PRIMARY KEY,
+    updatedAt INTEGER NOT NULL,
+    deleted INTEGER NOT NULL,
+    serverSeq INTEGER NOT NULL DEFAULT 0,
+    syncState TEXT NOT NULL,
+    trackName TEXT NOT NULL,
+    artist TEXT NOT NULL,
+    durationMs INTEGER NOT NULL,
+    playedAt INTEGER NOT NULL,
+    localDate TEXT NOT NULL
+);
+
+selectAll:
+SELECT * FROM listen;
+
+selectById:
+SELECT * FROM listen WHERE id = ?;
+
+selectPending:
+SELECT * FROM listen WHERE syncState = 'PENDING';
+
+upsert:
+INSERT OR REPLACE INTO listen VALUES ?;
+
+markSynced:
+UPDATE listen SET syncState = 'SYNCED' WHERE id = ? AND updatedAt = ?;
+
+markRejected:
+UPDATE listen SET syncState = 'REJECTED' WHERE id = ? AND updatedAt = ?;
+
+selectChangedSince:
+SELECT * FROM listen WHERE serverSeq > ? ORDER BY serverSeq ASC;
+
+selectRecent:
+SELECT * FROM listen WHERE deleted = 0 ORDER BY playedAt DESC, id DESC LIMIT ?;

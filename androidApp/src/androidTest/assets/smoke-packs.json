@@ -1,0 +1,177 @@
+[
+    {
+        "id":  "smoke-add",
+        "system":  "You are Wally, Tim\u0027s personal assistant. Be warm, brief and plain.\n\nFill one JSON form: kind, reply, action, target, args.\nkind \"action\": Tim reports a spending, a meal, check-in scores or a journal entry, or asks to add, save or change something. action is required: one name below, args = its fields with these exact names, target = the existing item\u0027s name for edits.\nkind \"answer\": a thank-you, greeting, feeling, advice, opinion, or a question his data answers (amounts are shekels); nothing to save. reply is one to four sentences.\nkind \"needs_laptop\": research only.\nAdds:\ncreate_task: args title, dueDate (yyyy-MM-dd)\nadd_spending: args amount, category (Food, Transport, Shopping, Bills, Fun, Health, Other), note, date\nadd_meal: args type (MEAL or SNACK), text, date, time\nadd_checkin: scores. args mood, energy, sleepQuality, stress, note\nadd_journal: journal or diary entry. args text = his words.\nadd_dream: args text, date\nfind: args kind (course, study_doc, goal, task, doc, event, exam, mail), target\nEdits: never for a new report; only when he says change, move, rename or fix a saved item (args = what changes):\nupdate_task: title, dueDate, done\nupdate_exam: title, localDate, time\nupdate_goal: title, why, deadline, status\nupdate_doc: title, body\nupdate_meal: type, text, date, time\nupdate_spending: amount, category, note, date\nupdate_checkin: mood, energy, sleepQuality, stress\nupdate_journal: text\nAn action always goes with kind \"action\". A thank-you has no action.",
+        "user":  "Today: 2026-03-04 (Wednesday), 14:20.\nOpen tasks: Buy a birthday card (due 2026-03-06); Renew library book (due 2026-03-09).\nToday so far: breakfast: oatmeal; spending: coffee 14.\nSpending this week: 212.\nExams: Statistics test on 2026-03-12 at 09:00.\n\nTim says: I spent 35 on lunch today, food",
+        "schema":  {
+                       "type":  "object",
+                       "properties":  {
+                                          "kind":  {
+                                                       "type":  "string",
+                                                       "enum":  [
+                                                                    "answer",
+                                                                    "action",
+                                                                    "needs_laptop"
+                                                                ]
+                                                   },
+                                          "reply":  {
+                                                        "type":  "string"
+                                                    },
+                                          "action":  {
+                                                         "type":  "string",
+                                                         "enum":  [
+                                                                      "create_task",
+                                                                      "add_spending",
+                                                                      "add_meal",
+                                                                      "add_checkin",
+                                                                      "add_journal",
+                                                                      "find",
+                                                                      "update_task",
+                                                                      "update_exam",
+                                                                      "update_meal",
+                                                                      "update_spending",
+                                                                      "update_checkin",
+                                                                      "update_journal",
+                                                                      "update_goal",
+                                                                      "update_doc"
+                                                                  ]
+                                                     },
+                                          "target":  {
+                                                         "type":  "string"
+                                                     },
+                                          "args":  {
+                                                       "type":  "object",
+                                                       "additionalProperties":  {
+                                                                                    "type":  "string"
+                                                                                }
+                                                   }
+                                      },
+                       "required":  [
+                                        "kind"
+                                    ]
+                   },
+        "expect":  {
+                       "kind":  "action",
+                       "action":  "add_spending",
+                       "args":  {
+                                    "amount":  35
+                                }
+                   }
+    },
+    {
+        "id":  "smoke-edit",
+        "system":  "You are Wally, Tim\u0027s personal assistant. Be warm, brief and plain.\n\nFill one JSON form: kind, reply, action, target, args.\nkind \"action\": Tim reports a spending, a meal, check-in scores or a journal entry, or asks to add, save or change something. action is required: one name below, args = its fields with these exact names, target = the existing item\u0027s name for edits.\nkind \"answer\": a thank-you, greeting, feeling, advice, opinion, or a question his data answers (amounts are shekels); nothing to save. reply is one to four sentences.\nkind \"needs_laptop\": research only.\nAdds:\ncreate_task: args title, dueDate (yyyy-MM-dd)\nadd_spending: args amount, category (Food, Transport, Shopping, Bills, Fun, Health, Other), note, date\nadd_meal: args type (MEAL or SNACK), text, date, time\nadd_checkin: scores. args mood, energy, sleepQuality, stress, note\nadd_journal: journal or diary entry. args text = his words.\nadd_dream: args text, date\nfind: args kind (course, study_doc, goal, task, doc, event, exam, mail), target\nEdits: never for a new report; only when he says change, move, rename or fix a saved item (args = what changes):\nupdate_task: title, dueDate, done\nupdate_exam: title, localDate, time\nupdate_goal: title, why, deadline, status\nupdate_doc: title, body\nupdate_meal: type, text, date, time\nupdate_spending: amount, category, note, date\nupdate_checkin: mood, energy, sleepQuality, stress\nupdate_journal: text\nAn action always goes with kind \"action\". A thank-you has no action.",
+        "user":  "Today: 2026-03-04 (Wednesday), 14:20.\nOpen tasks: Buy a birthday card (due 2026-03-06); Renew library book (due 2026-03-09).\nToday so far: breakfast: oatmeal; spending: coffee 14.\nSpending this week: 212.\nExams: Statistics test on 2026-03-12 at 09:00.\n\nTim says: Move my statistics test to 10:30",
+        "schema":  {
+                       "type":  "object",
+                       "properties":  {
+                                          "kind":  {
+                                                       "type":  "string",
+                                                       "enum":  [
+                                                                    "answer",
+                                                                    "action",
+                                                                    "needs_laptop"
+                                                                ]
+                                                   },
+                                          "reply":  {
+                                                        "type":  "string"
+                                                    },
+                                          "action":  {
+                                                         "type":  "string",
+                                                         "enum":  [
+                                                                      "create_task",
+                                                                      "add_spending",
+                                                                      "add_meal",
+                                                                      "add_checkin",
+                                                                      "add_journal",
+                                                                      "find",
+                                                                      "update_task",
+                                                                      "update_exam",
+                                                                      "update_meal",
+                                                                      "update_spending",
+                                                                      "update_checkin",
+                                                                      "update_journal",
+                                                                      "update_goal",
+                                                                      "update_doc"
+                                                                  ]
+                                                     },
+                                          "target":  {
+                                                         "type":  "string"
+                                                     },
+                                          "args":  {
+                                                       "type":  "object",
+                                                       "additionalProperties":  {
+                                                                                    "type":  "string"
+                                                                                }
+                                                   }
+                                      },
+                       "required":  [
+                                        "kind"
+                                    ]
+                   },
+        "expect":  {
+                       "kind":  "action",
+                       "action":  "update_exam",
+                       "target":  "statistics",
+                       "args":  {
+                                    "time":  "10:30"
+                                }
+                   }
+    },
+    {
+        "id":  "smoke-answer",
+        "system":  "You are Wally, Tim\u0027s personal assistant. Be warm, brief and plain.\n\nFill one JSON form: kind, reply, action, target, args.\nkind \"action\": Tim reports a spending, a meal, check-in scores or a journal entry, or asks to add, save or change something. action is required: one name below, args = its fields with these exact names, target = the existing item\u0027s name for edits.\nkind \"answer\": a thank-you, greeting, feeling, advice, opinion, or a question his data answers (amounts are shekels); nothing to save. reply is one to four sentences.\nkind \"needs_laptop\": research only.\nAdds:\ncreate_task: args title, dueDate (yyyy-MM-dd)\nadd_spending: args amount, category (Food, Transport, Shopping, Bills, Fun, Health, Other), note, date\nadd_meal: args type (MEAL or SNACK), text, date, time\nadd_checkin: scores. args mood, energy, sleepQuality, stress, note\nadd_journal: journal or diary entry. args text = his words.\nadd_dream: args text, date\nfind: args kind (course, study_doc, goal, task, doc, event, exam, mail), target\nEdits: never for a new report; only when he says change, move, rename or fix a saved item (args = what changes):\nupdate_task: title, dueDate, done\nupdate_exam: title, localDate, time\nupdate_goal: title, why, deadline, status\nupdate_doc: title, body\nupdate_meal: type, text, date, time\nupdate_spending: amount, category, note, date\nupdate_checkin: mood, energy, sleepQuality, stress\nupdate_journal: text\nAn action always goes with kind \"action\". A thank-you has no action.",
+        "user":  "Today: 2026-03-04 (Wednesday), 14:20.\nOpen tasks: Buy a birthday card (due 2026-03-06); Renew library book (due 2026-03-09).\nToday so far: breakfast: oatmeal; spending: coffee 14.\nSpending this week: 212.\nExams: Statistics test on 2026-03-12 at 09:00.\n\nTim says: How much did I spend this week?",
+        "schema":  {
+                       "type":  "object",
+                       "properties":  {
+                                          "kind":  {
+                                                       "type":  "string",
+                                                       "enum":  [
+                                                                    "answer",
+                                                                    "action",
+                                                                    "needs_laptop"
+                                                                ]
+                                                   },
+                                          "reply":  {
+                                                        "type":  "string"
+                                                    },
+                                          "action":  {
+                                                         "type":  "string",
+                                                         "enum":  [
+                                                                      "create_task",
+                                                                      "add_spending",
+                                                                      "add_meal",
+                                                                      "add_checkin",
+                                                                      "add_journal",
+                                                                      "find",
+                                                                      "update_task",
+                                                                      "update_exam",
+                                                                      "update_meal",
+                                                                      "update_spending",
+                                                                      "update_checkin",
+                                                                      "update_journal",
+                                                                      "update_goal",
+                                                                      "update_doc"
+                                                                  ]
+                                                     },
+                                          "target":  {
+                                                         "type":  "string"
+                                                     },
+                                          "args":  {
+                                                       "type":  "object",
+                                                       "additionalProperties":  {
+                                                                                    "type":  "string"
+                                                                                }
+                                                   }
+                                      },
+                       "required":  [
+                                        "kind"
+                                    ]
+                   },
+        "expect":  {
+                       "kind":  "answer",
+                       "dataValue":  "212"
+                   }
+    }
+]

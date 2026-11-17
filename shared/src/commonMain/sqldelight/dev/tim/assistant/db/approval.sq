@@ -1,0 +1,35 @@
+CREATE TABLE approval (
+    id TEXT NOT NULL PRIMARY KEY,
+    updatedAt INTEGER NOT NULL,
+    deleted INTEGER NOT NULL,
+    serverSeq INTEGER NOT NULL DEFAULT 0,
+    syncState TEXT NOT NULL,
+    tool TEXT NOT NULL,
+    argsJson TEXT NOT NULL,
+    summary TEXT NOT NULL,
+    status TEXT NOT NULL,
+    createdAt INTEGER NOT NULL,
+    resultText TEXT
+);
+selectAll:
+SELECT * FROM approval;
+
+selectById:
+SELECT * FROM approval WHERE id = ?;
+
+selectPending:
+SELECT * FROM approval WHERE syncState = 'PENDING';
+
+upsert:
+INSERT OR REPLACE INTO approval VALUES ?;
+
+markSynced:
+UPDATE approval SET syncState = 'SYNCED' WHERE id = ? AND updatedAt = ?;
+
+markRejected:
+UPDATE approval SET syncState = 'REJECTED' WHERE id = ? AND updatedAt = ?;
+
+selectChangedSince:
+SELECT * FROM approval WHERE serverSeq > ? ORDER BY serverSeq ASC;
+selectByStatus:
+SELECT * FROM approval WHERE status = ? AND deleted = 0;

@@ -1,0 +1,30 @@
+CREATE TABLE journal (
+    id TEXT NOT NULL PRIMARY KEY,
+    updatedAt INTEGER NOT NULL,
+    deleted INTEGER NOT NULL,
+    serverSeq INTEGER NOT NULL DEFAULT 0,
+    syncState TEXT NOT NULL,
+    text TEXT NOT NULL,
+    createdAt INTEGER NOT NULL
+);
+
+selectAll:
+SELECT * FROM journal;
+
+selectById:
+SELECT * FROM journal WHERE id = ?;
+
+selectPending:
+SELECT * FROM journal WHERE syncState = 'PENDING';
+
+upsert:
+INSERT OR REPLACE INTO journal VALUES ?;
+
+markSynced:
+UPDATE journal SET syncState = 'SYNCED' WHERE id = ? AND updatedAt = ?;
+
+markRejected:
+UPDATE journal SET syncState = 'REJECTED' WHERE id = ? AND updatedAt = ?;
+
+selectChangedSince:
+SELECT * FROM journal WHERE serverSeq > ? ORDER BY serverSeq ASC;

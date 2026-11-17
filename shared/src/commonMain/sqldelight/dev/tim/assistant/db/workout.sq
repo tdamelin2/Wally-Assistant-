@@ -1,0 +1,33 @@
+CREATE TABLE workout (
+    id TEXT NOT NULL PRIMARY KEY,
+    updatedAt INTEGER NOT NULL,
+    deleted INTEGER NOT NULL,
+    serverSeq INTEGER NOT NULL DEFAULT 0,
+    syncState TEXT NOT NULL,
+    hcRecordId TEXT NOT NULL,
+    type TEXT NOT NULL,
+    startAt INTEGER NOT NULL,
+    endAt INTEGER NOT NULL,
+    distanceMeters INTEGER
+);
+
+selectAll:
+SELECT * FROM workout;
+
+selectById:
+SELECT * FROM workout WHERE id = ?;
+
+selectPending:
+SELECT * FROM workout WHERE syncState = 'PENDING';
+
+upsert:
+INSERT OR REPLACE INTO workout VALUES ?;
+
+markSynced:
+UPDATE workout SET syncState = 'SYNCED' WHERE id = ? AND updatedAt = ?;
+
+markRejected:
+UPDATE workout SET syncState = 'REJECTED' WHERE id = ? AND updatedAt = ?;
+
+selectChangedSince:
+SELECT * FROM workout WHERE serverSeq > ? ORDER BY serverSeq ASC;

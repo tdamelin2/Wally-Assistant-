@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Chat — chat list</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#1F6F4A}a:hover{color:#0F3D27}
+button{font-family:inherit}
+.c{width:100%;border:0;border-radius:14px;background:transparent;padding:10px 12px;box-sizing:border-box;text-align:left;color:#16201A;display:flex;flex-direction:column;gap:2px}
+.ct{display:flex;justify-content:space-between;align-items:baseline;gap:8px}
+.n{font-size:15px;font-weight:500;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.tm{flex:none;font-size:12px;color:#55605A}
+.pv{font-size:13px;color:#55605A;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+</style>
+</helmet>
+<div style="width: 390px; height: 844px; box-sizing: border-box; background: #F6F7F4; color: #16201A; font-family: Roboto, system-ui, sans-serif; position: relative; overflow: hidden">
+
+  <div aria-hidden="true" style="position: absolute; left: 0; right: 0; top: 0; bottom: 0; background: rgba(22,32,26,0.45)"></div>
+
+  <aside aria-label="Chats" style="position: absolute; left: 0; top: 0; bottom: 0; width: 320px; background: #FFFFFF; border-radius: 0 24px 24px 0; padding: 24px 12px 20px 12px; box-sizing: border-box; display: flex; flex-direction: column; gap: 8px">
+    <div style="display: flex; justify-content: space-between; align-items: baseline; padding: 0 8px 6px 8px">
+      <h1 style="margin: 0; font-size: 22px; font-weight: 500">Chats</h1>
+      <span style="font-size: 12px; color: #55605A">6 of 10</span>
+    </div>
+
+    <button class="c" style="background: #DCEFE3"><span class="ct"><span class="n" style="display: flex; align-items: center; gap: 6px"><svg width="14" height="14" viewBox="0 0 24 24" fill="#1F6F4A" aria-label="Pinned"><path d="M15 3l6 6-4 1-4 4 1 5-2 2-4-6-6 6v-2l5-5-6-4 2-2 5 1 4-4z"></path></svg>Weekly report</span><span class="tm">Sun</span></span><span class="pv">[Last week in a few lines…]</span></button>
+
+    <div style="height: 1px; background: #E4E7E1; margin: 4px 8px"></div>
+
+    <button class="c" style="background: #EFF2EE"><span class="ct"><span class="n">[Chat name]</span><span class="tm">Now</span></span><span class="pv">Done — "buy milk" is on your list…</span></button>
+    <button class="c"><span class="ct"><span class="n">[Chat name]</span><span class="tm">Yesterday</span></span><span class="pv">[Last message preview…]</span></button>
+    <button class="c"><span class="ct"><span class="n">[Chat name]</span><span class="tm">Mon</span></span><span class="pv">[Last message preview…]</span></button>
+    <button class="c"><span class="ct"><span class="n">[Chat name]</span><span class="tm">Nov 6</span></span><span class="pv">[Last message preview…]</span></button>
+    <button class="c"><span class="ct"><span class="n">[Chat name]</span><span class="tm">Nov 2</span></span><span class="pv">[Last message preview…]</span></button>
+
+    <p style="margin: 6px 8px 0 8px; font-size: 12px; color: #55605A; line-height: 1.4">When you start an 11th chat, the oldest is summarized into Memory.</p>
+
+    <div style="margin-top: auto; display: flex; flex-direction: column; gap: 8px">
+      <button style="height: 48px; border: 0; border-radius: 24px; background: transparent; color: #1F6F4A; font-size: 15px; font-weight: 500; display: flex; align-items: center; justify-content: center; gap: 8px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a6 6 0 00-6 6c0 2.2 1.2 3.6 2 4.5V17h8v-3.5c.8-.9 2-2.3 2-4.5a6 6 0 00-6-6z"></path><path d="M9 21h6"></path></svg>Memory</button>
+      <button style="height: 52px; border: 0; border-radius: 26px; background: #1F6F4A; color: #FFFFFF; font-size: 16px; font-weight: 500; display: flex; align-items: center; justify-content: center; gap: 8px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg>New chat</button>
+    </div>
+  </aside>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+renderVals() {
+return {};
+}
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+{
+  "bindAddress": "100.x.y.z",
+  "port": 8080,
+  "dbPath": "/var/lib/assistant/assistant.db",
+  "tokens": {
+    "phone": "<64 hex chars from openssl rand -hex 32>",
+    "laptop": "<64 hex chars from openssl rand -hex 32>",
+    "calendar": "<64 hex chars; the key Wally Calendar uses for its Make Wally task button, see ops/wallycal.md>"
+  },
+  "google": {
+    "clientId": "<client id of wally-server, see ops/google-setup.md>",
+    "clientSecret": "<client secret of wally-server, never paste it anywhere else>"
+  },
+  "ollama": {
+    "url": "http://127.0.0.1:11434",
+    "briefingModel": "qwen3:4b",
+    "xpsUrl": "http://xxxxxxxx:11434",
+    "embedModel": "embeddinggemma"
+  },
+  "codexPath": "/usr/bin/codex",
+  "moodle": {
+    "baseUrl": "https://moodle.example.edu"
+  },
+  "spotify": {
+    "clientId": "<client id of the Wally app on developer.spotify.com, see ops/spotify.md>",
+    "clientSecret": "<client secret of that app, never paste it anywhere else>"
+  },
+  "wallycal": {
+    "url": "http://<hp-tailscale-ip>:8081",
+    "token": "<the wally key from Wally Calendar's config, see ops/wallycal.md>"
+  }
+}

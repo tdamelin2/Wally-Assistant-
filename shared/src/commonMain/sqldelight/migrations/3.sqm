@@ -1,0 +1,61 @@
+CREATE TABLE course (
+    id TEXT NOT NULL PRIMARY KEY,
+    updatedAt INTEGER NOT NULL,
+    deleted INTEGER NOT NULL,
+    serverSeq INTEGER NOT NULL DEFAULT 0,
+    syncState TEXT NOT NULL,
+    moodleId INTEGER,
+    name TEXT NOT NULL,
+    enabled INTEGER NOT NULL DEFAULT 0
+);
+
+CREATE TABLE study_file (
+    id TEXT NOT NULL PRIMARY KEY,
+    updatedAt INTEGER NOT NULL,
+    deleted INTEGER NOT NULL,
+    serverSeq INTEGER NOT NULL DEFAULT 0,
+    syncState TEXT NOT NULL,
+    courseId TEXT NOT NULL,
+    name TEXT NOT NULL,
+    origin TEXT NOT NULL,
+    sizeBytes INTEGER NOT NULL,
+    textStatus TEXT NOT NULL,
+    studySetDocId TEXT
+);
+
+CREATE TABLE card (
+    id TEXT NOT NULL PRIMARY KEY,
+    updatedAt INTEGER NOT NULL,
+    deleted INTEGER NOT NULL,
+    serverSeq INTEGER NOT NULL DEFAULT 0,
+    syncState TEXT NOT NULL,
+    fileId TEXT NOT NULL,
+    front TEXT NOT NULL,
+    back TEXT NOT NULL,
+    lastResult TEXT,
+    lastReviewedAt INTEGER
+);
+
+CREATE TABLE quiz (
+    id TEXT NOT NULL PRIMARY KEY,
+    updatedAt INTEGER NOT NULL,
+    deleted INTEGER NOT NULL,
+    serverSeq INTEGER NOT NULL DEFAULT 0,
+    syncState TEXT NOT NULL,
+    courseId TEXT NOT NULL,
+    questionsJson TEXT NOT NULL,
+    score INTEGER,
+    takenAt INTEGER
+);
+
+CREATE TABLE exam (
+    id TEXT NOT NULL PRIMARY KEY,
+    updatedAt INTEGER NOT NULL,
+    deleted INTEGER NOT NULL,
+    serverSeq INTEGER NOT NULL DEFAULT 0,
+    syncState TEXT NOT NULL,
+    courseId TEXT,
+    title TEXT NOT NULL,
+    localDate TEXT NOT NULL,
+    time TEXT
+);

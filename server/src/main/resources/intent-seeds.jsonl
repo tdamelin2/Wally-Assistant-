@@ -1,0 +1,355 @@
+{"intent":"none","text":"Thanks, that was helpful"}
+{"intent":"none","text":"How are you?"}
+{"intent":"none","text":"Can you give me some advice on studying for exams?"}
+{"intent":"none","text":"I feel overwhelmed with everything lately"}
+{"intent":"none","text":"What do you think about taking breaks while studying?"}
+{"intent":"none","text":"Tell me a joke"}
+{"intent":"none","text":"Good morning!"}
+{"intent":"none","text":"Why is sleep important for memory?"}
+{"intent":"none","text":"Can you explain what a derivative is?"}
+{"intent":"none","text":"Do you have any tips for staying focused?"}
+{"intent":"none","text":"Thank you so much"}
+{"intent":"none","text":"What\u0027s a good way to start a presentation?"}
+{"intent":"none","text":"Should I study in the morning or at night?"}
+{"intent":"none","text":"Who are you?"}
+{"intent":"add_checkin","text":"Check-in: mood 4, energy 3, sleep 5, stress 2"}
+{"intent":"add_checkin","text":"Log my check-in, mood 3 energy 2 sleep 4 stress 4"}
+{"intent":"add_checkin","text":"Daily check in: mood is 5, energy 4, sleep quality 3, stress 1"}
+{"intent":"add_checkin","text":"Check in with mood 2, energy 2, sleep 2, stress 5"}
+{"intent":"add_checkin","text":"My check-in is mood 4 energy 5 sleep 4 stress 2"}
+{"intent":"add_checkin","text":"Record a check-in: stress 3, mood 3, energy 3, sleep 3"}
+{"intent":"add_checkin","text":"Please do my check-in: mood 5, energy 5, sleep 5, stress 1"}
+{"intent":"add_checkin","text":"Check-in time: mood 1, energy 2, sleep 1, stress 5"}
+{"intent":"add_checkin","text":"Morning check-in, mood 4 energy 4 sleep 3 stress 3"}
+{"intent":"add_checkin","text":"Save my check-in: mood 3, energy 4, sleep 2, stress 2"}
+{"intent":"add_checkin","text":"I want to check in: mood 2 energy 3 sleep 4 stress 4"}
+{"intent":"add_checkin","text":"Evening check-in with mood 4, energy 2, sleep 5, stress 3"}
+{"intent":"ask_tasks","text":"What tasks do I have open?"}
+{"intent":"ask_tasks","text":"Which tasks are still not done?"}
+{"intent":"ask_tasks","text":"List my to-do items"}
+{"intent":"ask_tasks","text":"What\u0027s on my to-do list?"}
+{"intent":"ask_tasks","text":"Show me my open tasks"}
+{"intent":"ask_tasks","text":"What homework is pending?"}
+{"intent":"ask_tasks","text":"Which assignments are due soon?"}
+{"intent":"ask_tasks","text":"What\u0027s due this week?"}
+{"intent":"ask_tasks","text":"What is due tomorrow?"}
+{"intent":"ask_tasks","text":"Tell me what tasks are due today"}
+{"intent":"ask_tasks","text":"What\u0027s left on my list?"}
+{"intent":"ask_tasks","text":"Any tasks I haven\u0027t finished?"}
+{"intent":"ask_tasks","text":"What are my pending tasks?"}
+{"intent":"ask_tasks","text":"What do I still have to hand in?"}
+{"intent":"create_task","text":"Add a task to call the dentist tomorrow"}
+{"intent":"create_task","text":"Remind me to submit the form on Friday"}
+{"intent":"create_task","text":"Put buy a notebook on my to-do list"}
+{"intent":"create_task","text":"I need to email the professor by Monday"}
+{"intent":"create_task","text":"Create a task: finish the lab report"}
+{"intent":"create_task","text":"New task: renew the library card"}
+{"intent":"create_task","text":"Can you add pay the rent to my tasks"}
+{"intent":"create_task","text":"Don\u0027t let me forget to book the flights"}
+{"intent":"create_task","text":"Make a to-do for the statistics homework due Thursday"}
+{"intent":"create_task","text":"Please add a task to clean my desk"}
+{"intent":"create_task","text":"Note down a task to print the tickets"}
+{"intent":"create_task","text":"Add to my list: pick up the package"}
+{"intent":"ask_events","text":"What events do I have tomorrow?"}
+{"intent":"ask_events","text":"What\u0027s on my calendar on Friday?"}
+{"intent":"ask_events","text":"Do I have any meetings tomorrow?"}
+{"intent":"ask_events","text":"What lectures do I have on Monday?"}
+{"intent":"ask_events","text":"Show me my calendar for next Tuesday"}
+{"intent":"ask_events","text":"What\u0027s scheduled for tomorrow?"}
+{"intent":"ask_events","text":"Am I free on Thursday?"}
+{"intent":"ask_events","text":"What classes do I have tomorrow?"}
+{"intent":"ask_events","text":"What is on my calendar this weekend?"}
+{"intent":"ask_events","text":"Which appointments do I have on Sunday?"}
+{"intent":"ask_events","text":"What is happening on Wednesday?"}
+{"intent":"ask_events","text":"Tell me my schedule for tomorrow"}
+{"intent":"ask_events","text":"Any events on the 20th?"}
+{"intent":"ask_events","text":"What\u0027s my calendar like on Monday?"}
+{"intent":"ask_spending_week","text":"How much did I spend this week?"}
+{"intent":"ask_spending_week","text":"What\u0027s my spending so far this week?"}
+{"intent":"ask_spending_week","text":"How much money have I spent since Sunday?"}
+{"intent":"ask_spending_week","text":"Show me this week\u0027s expenses"}
+{"intent":"ask_spending_week","text":"What did I spend this week in total?"}
+{"intent":"ask_spending_week","text":"Tell me my weekly spending"}
+{"intent":"ask_spending_week","text":"What\u0027s my total spending for the week?"}
+{"intent":"ask_spending_week","text":"Break down my spending this week by category"}
+{"intent":"ask_spending_week","text":"How much did I burn through this week?"}
+{"intent":"ask_spending_week","text":"What have my expenses been this week?"}
+{"intent":"ask_spending_week","text":"How much cash went out this week?"}
+{"intent":"ask_spending_week","text":"Give me a summary of this week\u0027s spending"}
+{"intent":"ask_spending_week","text":"How expensive was my week?"}
+{"intent":"ask_spending_week","text":"What is my spending total since the start of the week?"}
+{"intent":"add_meal","text":"I had eggs and toast for breakfast"}
+{"intent":"add_meal","text":"For lunch I ate a chicken salad"}
+{"intent":"add_meal","text":"Log my dinner: pasta with tomato sauce"}
+{"intent":"add_meal","text":"I ate an apple as a snack"}
+{"intent":"add_meal","text":"Had a bowl of oatmeal this morning"}
+{"intent":"add_meal","text":"Just finished a sandwich and some fruit"}
+{"intent":"add_meal","text":"Add a meal: rice with vegetables"}
+{"intent":"add_meal","text":"I\u0027m having soup for dinner"}
+{"intent":"add_meal","text":"Breakfast was yogurt with granola"}
+{"intent":"add_meal","text":"Snack: a handful of almonds"}
+{"intent":"add_meal","text":"Ate a falafel pita for lunch"}
+{"intent":"add_meal","text":"Record that I drank a protein shake"}
+{"intent":"mark_task_done","text":"Mark the dentist task as done"}
+{"intent":"mark_task_done","text":"I finished the lab report task"}
+{"intent":"mark_task_done","text":"Check off the grocery task"}
+{"intent":"mark_task_done","text":"Tick off the rent payment task"}
+{"intent":"mark_task_done","text":"The statistics homework task is done"}
+{"intent":"mark_task_done","text":"Complete the task about the library card"}
+{"intent":"mark_task_done","text":"Set the flight booking task to done"}
+{"intent":"mark_task_done","text":"Mark my email to the professor as completed"}
+{"intent":"mark_task_done","text":"I\u0027m done with the poster task"}
+{"intent":"mark_task_done","text":"Cross off print the tickets"}
+{"intent":"mark_task_done","text":"Please mark the laundry task finished"}
+{"intent":"mark_task_done","text":"Finished the reading task, mark it"}
+{"intent":"find","text":"Find my notes about linear algebra"}
+{"intent":"find","text":"Search for the email from the registrar"}
+{"intent":"find","text":"Where is the study guide for biology?"}
+{"intent":"find","text":"Look for the goal about running"}
+{"intent":"find","text":"Find the document called syllabus"}
+{"intent":"find","text":"Search my notes for the budget"}
+{"intent":"find","text":"Can you find the task about the dentist"}
+{"intent":"find","text":"Look up the course schedule"}
+{"intent":"find","text":"Find the mail from the bank"}
+{"intent":"find","text":"Locate my goal for reading"}
+{"intent":"find","text":"Search for the lecture slides"}
+{"intent":"find","text":"Find the exam called calculus"}
+{"intent":"add_journal","text":"Journal: today was a really productive day"}
+{"intent":"add_journal","text":"Write in my journal that I felt proud of my presentation"}
+{"intent":"add_journal","text":"Add a journal entry about my walk in the park"}
+{"intent":"add_journal","text":"Note for my journal: I need to slow down this week"}
+{"intent":"add_journal","text":"Journal entry: had a nice talk with my sister"}
+{"intent":"add_journal","text":"Please write down in the journal that the exam went okay"}
+{"intent":"add_journal","text":"Dear diary, today I finally finished the project"}
+{"intent":"add_journal","text":"Save this to my journal: I\u0027m grateful for good friends"}
+{"intent":"add_journal","text":"Journal this: felt anxious before the lecture"}
+{"intent":"add_journal","text":"Put in my journal that I started running again"}
+{"intent":"add_journal","text":"Journal: lots of rain, stayed home and read"}
+{"intent":"add_journal","text":"Record a journal note that the evening felt calm"}
+{"intent":"move_task","text":"Move the dentist task to Friday"}
+{"intent":"move_task","text":"Push the lab report task to next Monday"}
+{"intent":"move_task","text":"Reschedule the rent task for tomorrow"}
+{"intent":"move_task","text":"Change the due date of the poster task to Thursday"}
+{"intent":"move_task","text":"Postpone the statistics homework to Sunday"}
+{"intent":"move_task","text":"Move my grocery task to the 20th"}
+{"intent":"move_task","text":"Set the due date for the library card task to next week"}
+{"intent":"move_task","text":"Shift the email task to Wednesday"}
+{"intent":"move_task","text":"Can you move the laundry task to tomorrow"}
+{"intent":"move_task","text":"Delay the reading task until Tuesday"}
+{"intent":"move_task","text":"Reschedule the flights task to Monday"}
+{"intent":"move_task","text":"Make the printing task due on Friday"}
+{"intent":"add_spending","text":"I spent 35 on lunch"}
+{"intent":"add_spending","text":"Paid 20 shekels for the bus"}
+{"intent":"add_spending","text":"Log 50 for groceries"}
+{"intent":"add_spending","text":"Bought a coffee for 12"}
+{"intent":"add_spending","text":"Record an expense of 80 for a haircut"}
+{"intent":"add_spending","text":"Spent 120 on a jacket"}
+{"intent":"add_spending","text":"Add spending 15 taxi"}
+{"intent":"add_spending","text":"The movie ticket cost me 45"}
+{"intent":"add_spending","text":"I just paid 60 for the phone bill"}
+{"intent":"add_spending","text":"Put down 9 for a snack"}
+{"intent":"add_spending","text":"Track 200 shekels for textbooks"}
+{"intent":"add_spending","text":"Gave 25 for a birthday card"}
+{"intent":"ask_today","text":"What\u0027s on my plate today?"}
+{"intent":"ask_today","text":"What do I have going on today"}
+{"intent":"ask_today","text":"Give me an overview of my day"}
+{"intent":"ask_today","text":"How does my day look?"}
+{"intent":"ask_today","text":"What\u0027s my schedule for today?"}
+{"intent":"ask_today","text":"Tell me what is happening today"}
+{"intent":"ask_today","text":"Anything planned for me today?"}
+{"intent":"ask_today","text":"Run me through today"}
+{"intent":"ask_today","text":"What do I have to do today?"}
+{"intent":"ask_today","text":"Show me today"}
+{"intent":"ask_today","text":"What\u0027s up on my agenda today?"}
+{"intent":"ask_today","text":"Walk me through my day"}
+{"intent":"ask_today","text":"Is there anything I need to know about today?"}
+{"intent":"ask_today","text":"What does today look like for me?"}
+{"intent":"move_exam","text":"Move the algebra exam to Thursday"}
+{"intent":"move_exam","text":"The physics exam got rescheduled to the 14th"}
+{"intent":"move_exam","text":"Change the date of the biology exam to next Monday"}
+{"intent":"move_exam","text":"Reschedule my calculus exam to Sunday at 10"}
+{"intent":"move_exam","text":"Push the chemistry exam to Wednesday at 9:30"}
+{"intent":"move_exam","text":"The statistics exam moved to Tuesday"}
+{"intent":"move_exam","text":"Update the algebra exam time to 14:00"}
+{"intent":"move_exam","text":"Move my history exam to next week"}
+{"intent":"move_exam","text":"Set the economics exam to the 20th"}
+{"intent":"move_exam","text":"The logic exam is now on Friday"}
+{"intent":"move_exam","text":"Shift my programming exam to Monday"}
+{"intent":"move_exam","text":"Change the physics exam to 16:00"}
+{"intent":"none","text":"Which assignments did I already hand in?"}
+{"intent":"none","text":"Where is my next lecture held?"}
+{"intent":"none","text":"Who else is attending my appointment on Sunday?"}
+{"intent":"none","text":"How much did I spend on coffee this month?"}
+{"intent":"none","text":"What was my total spending last year?"}
+{"intent":"none","text":"How much did I spend on transport this week?"}
+{"intent":"none","text":"What did I eat for dinner last night?"}
+{"intent":"none","text":"How did I sleep last week?"}
+{"intent":"none","text":"When is my next exam?"}
+{"intent":"none","text":"How many tasks did I complete in October?"}
+{"intent":"none","text":"What was my energy level on Monday?"}
+{"intent":"none","text":"What time does the pharmacy open?"}
+{"intent":"none","text":"Who sent me the last email?"}
+{"intent":"none","text":"What did I buy the other day?"}
+{"intent":"ask_today","text":"What\u0027s the plan for my day?"}
+{"intent":"ask_today","text":"Anything I should know about my day?"}
+{"intent":"ask_today","text":"So what is on for me today?"}
+{"intent":"ask_today","text":"Give me my daily agenda"}
+{"intent":"ask_today","text":"What have I got scheduled for the rest of today?"}
+{"intent":"ask_tasks","text":"What\u0027s on my plate task-wise?"}
+{"intent":"ask_tasks","text":"Give me a list of what I need to get done"}
+{"intent":"ask_tasks","text":"Which of my tasks are waiting for me?"}
+{"intent":"ask_tasks","text":"Do I have any open assignments?"}
+{"intent":"ask_tasks","text":"Read me my to-do list"}
+{"intent":"ask_events","text":"Do I have class on Tuesday?"}
+{"intent":"ask_events","text":"What\u0027s happening on my calendar next Wednesday?"}
+{"intent":"ask_events","text":"Any lectures tomorrow morning?"}
+{"intent":"ask_events","text":"Which events are coming up on Saturday?"}
+{"intent":"ask_events","text":"What do I have on the calendar for the 25th?"}
+{"intent":"ask_spending_week","text":"What have I spent in the last seven days?"}
+{"intent":"ask_spending_week","text":"How much did this week cost me in total?"}
+{"intent":"ask_spending_week","text":"Tell me how my spending is going this week"}
+{"intent":"ask_spending_week","text":"How much have I spent so far this week?"}
+{"intent":"ask_spending_week","text":"What\u0027s the weekly spending damage?"}
+{"intent":"ask_events","text":"What\u0027s my schedule on Thursday?"}
+{"intent":"ask_events","text":"What does my calendar look like tomorrow?"}
+{"intent":"ask_events","text":"Is anything on my calendar for next Friday?"}
+{"intent":"ask_events","text":"Tell me what\u0027s on tomorrow"}
+{"intent":"ask_events","text":"What have I got on Monday?"}
+{"intent":"ask_events","text":"What\u0027s on for Saturday?"}
+{"intent":"ask_events","text":"Which events do I have this week on Tuesday?"}
+{"intent":"ask_events","text":"What is on my agenda for Wednesday?"}
+{"intent":"ask_events","text":"Show me what\u0027s scheduled for the 15th"}
+{"intent":"ask_events","text":"Do I have anything on tomorrow?"}
+{"intent":"ask_today","text":"What do I have on right now today?"}
+{"intent":"ask_today","text":"Tell me about my day"}
+{"intent":"ask_today","text":"How\u0027s my day looking?"}
+{"intent":"ask_today","text":"What\u0027s on for me today?"}
+{"intent":"ask_today","text":"Any plans for me today?"}
+{"intent":"ask_today","text":"What\u0027s today looking like?"}
+{"intent":"ask_tasks","text":"Which tasks do I have left to do?"}
+{"intent":"ask_tasks","text":"What do I need to get done soon?"}
+{"intent":"ask_tasks","text":"What homework do I have left?"}
+{"intent":"ask_tasks","text":"Tell me about my open to-dos"}
+{"intent":"ask_spending","text":"How much cash went out last month"}
+{"intent":"ask_spending","text":"What was my total spending yesterday"}
+{"intent":"ask_spending","text":"Tell me what I paid for groceries last week"}
+{"intent":"ask_spending","text":"How much have I put into food this month"}
+{"intent":"ask_spending","text":"Show me my expenses for November"}
+{"intent":"ask_spending","text":"Give me last week\u0027s spending breakdown"}
+{"intent":"ask_spending","text":"How big was my transport bill last month"}
+{"intent":"ask_spending","text":"Total I laid out on fun stuff last week"}
+{"intent":"ask_spending","text":"Where did my money go this month"}
+{"intent":"ask_spending","text":"What\u0027s my spending total for yesterday"}
+{"intent":"ask_spending","text":"Spending summary for the past week"}
+{"intent":"ask_spending","text":"How much did I shell out on shopping last month"}
+{"intent":"ask_spending","text":"Remind me how much I spent on Friday"}
+{"intent":"ask_spending","text":"What did I pay out on Tuesday"}
+{"intent":"ask_exam","text":"When is my next test"}
+{"intent":"ask_exam","text":"What exam do I have coming up"}
+{"intent":"ask_exam","text":"How long until my next exam"}
+{"intent":"ask_exam","text":"Which exams are coming up soon"}
+{"intent":"ask_exam","text":"When do I sit the chemistry exam"}
+{"intent":"ask_exam","text":"What date is the physics exam"}
+{"intent":"ask_exam","text":"Do I have any exams coming"}
+{"intent":"ask_exam","text":"Tell me when my calculus exam is"}
+{"intent":"ask_exam","text":"What time is the statistics exam"}
+{"intent":"ask_exam","text":"List my upcoming exams"}
+{"intent":"ask_exam","text":"When is the next final"}
+{"intent":"ask_exam","text":"When is the biology exam"}
+{"intent":"ask_exam","text":"Which exam is first"}
+{"intent":"ask_exam","text":"Where do I stand on exam dates"}
+{"intent":"ask_health","text":"How many hours did I sleep last night"}
+{"intent":"ask_health","text":"What was my sleep like yesterday"}
+{"intent":"ask_health","text":"How much sleep did I get this week"}
+{"intent":"ask_health","text":"How many steps did I walk yesterday"}
+{"intent":"ask_health","text":"What\u0027s my step count today"}
+{"intent":"ask_health","text":"Did I walk much last week"}
+{"intent":"ask_health","text":"What was my heart rate at rest this morning"}
+{"intent":"ask_health","text":"Average resting pulse for last week"}
+{"intent":"ask_health","text":"How well did I rest on Tuesday"}
+{"intent":"ask_health","text":"Show my sleep for the past week"}
+{"intent":"ask_health","text":"How many steps have I done so far today"}
+{"intent":"ask_health","text":"What is my resting pulse"}
+{"intent":"ask_health","text":"How long was my sleep on Friday"}
+{"intent":"ask_health","text":"Step total for this week"}
+{"intent":"ask_meals","text":"What have I eaten today"}
+{"intent":"ask_meals","text":"What did I have for food yesterday"}
+{"intent":"ask_meals","text":"How many calories have I had so far"}
+{"intent":"ask_meals","text":"Calorie count for today"}
+{"intent":"ask_meals","text":"List what I ate on Tuesday"}
+{"intent":"ask_meals","text":"What did I snack on yesterday"}
+{"intent":"ask_meals","text":"How much did I eat yesterday in calories"}
+{"intent":"ask_meals","text":"Which meals did I log today"}
+{"intent":"ask_meals","text":"What food did I log on Monday"}
+{"intent":"ask_meals","text":"Total kcal I took in yesterday"}
+{"intent":"ask_meals","text":"Did I eat anything yet today"}
+{"intent":"ask_meals","text":"What did I have for breakfast today"}
+{"intent":"ask_meals","text":"How many calories was dinner yesterday"}
+{"intent":"ask_meals","text":"Tell me everything I ate on Friday"}
+{"intent":"ask_checkin","text":"How did I rate my mood yesterday"}
+{"intent":"ask_checkin","text":"What were my scores in the check-in today"}
+{"intent":"ask_checkin","text":"How was my energy last week"}
+{"intent":"ask_checkin","text":"Show my daily check-in from Tuesday"}
+{"intent":"ask_checkin","text":"What stress level did I report yesterday"}
+{"intent":"ask_checkin","text":"Average mood over the last week"}
+{"intent":"ask_checkin","text":"How have I been feeling this week"}
+{"intent":"ask_checkin","text":"What did I answer on my check-in yesterday"}
+{"intent":"ask_checkin","text":"Mood and energy for last week"}
+{"intent":"ask_checkin","text":"How stressed was I on Monday"}
+{"intent":"ask_checkin","text":"Pull up my check-in from last week"}
+{"intent":"ask_checkin","text":"How did the day go yesterday according to my check-in"}
+{"intent":"ask_checkin","text":"How was I feeling on Friday"}
+{"intent":"ask_checkin","text":"Did I log my check-in yesterday"}
+{"intent":"add_spending","text":"The pharmacy took 95 from me"}
+{"intent":"add_spending","text":"Handed over 140 at the bookstore"}
+{"intent":"add_spending","text":"Our dinner bill came to 210"}
+{"intent":"add_spending","text":"The haircut set me back 70 shekels"}
+{"intent":"add_spending","text":"The electricity payment was 330"}
+{"intent":"add_spending","text":"A sandwich at the kiosk was 28 shekels"}
+{"intent":"add_meal","text":"Grabbed a sandwich on my way to class"}
+{"intent":"create_task","text":"I need to submit the registration form"}
+{"intent":"create_task","text":"Got to collect the package tomorrow"}
+{"intent":"create_task","text":"I have to call the bank"}
+{"intent":"mark_task_done","text":"All done with the lab report"}
+{"intent":"mark_task_done","text":"The essay is finished"}
+{"intent":"add_journal","text":"Today felt heavy and I stayed quiet"}
+{"intent":"add_journal","text":"I feel restless about my plans lately"}
+{"intent":"create_task","text":"I want to renew my gym card tomorrow"}
+{"intent":"create_task","text":"I\u0027m going to buy a birthday gift on Friday"}
+{"intent":"create_task","text":"I plan to hand in the lab report on Monday"}
+{"intent":"create_task","text":"I\u0027d like to schedule a dentist visit next week"}
+{"intent":"create_task","text":"I want to finish reading chapter four by Thursday"}
+{"intent":"create_task","text":"I\u0027m going to reply to the landlord today"}
+{"intent":"create_task","text":"I am going to sort out my tax forms tomorrow"}
+{"intent":"create_task","text":"I plan to clean the apartment on Sunday"}
+{"intent":"create_task","text":"I\u0027d like to sign up for the swimming class"}
+{"intent":"create_task","text":"I want to call grandma this evening"}
+{"intent":"create_task","text":"I\u0027m gonna pick up my prescription tomorrow"}
+{"intent":"create_task","text":"I would like to order the textbook this week"}
+{"intent":"create_task","text":"I want to update my CV before Friday"}
+{"intent":"add_meal","text":"Had a bagel with cream cheese as a snack"}
+{"intent":"add_meal","text":"Ate two slices of pizza for lunch"}
+{"intent":"add_meal","text":"Had cereal with milk for breakfast"}
+{"intent":"add_meal","text":"Ate a handful of nuts as a snack"}
+{"intent":"add_meal","text":"Snacked on some grapes"}
+{"intent":"add_meal","text":"Had leftover noodles for dinner"}
+{"intent":"add_spending","text":"Grabbed a sandwich for 22"}
+{"intent":"add_spending","text":"Picked up some vitamins for 55"}
+{"intent":"add_spending","text":"Got a new charger for 70"}
+{"intent":"add_spending","text":"Grabbed lunch at the cafe for 38"}
+{"intent":"add_spending","text":"Picked up a pizza for 65"}
+{"intent":"add_spending","text":"Got a coffee and a bagel for 30"}
+{"intent":"none","text":"I had a heavy day at work and I am pretty worn out"}
+{"intent":"none","text":"I had a lousy afternoon and feel low on energy"}
+{"intent":"none","text":"I had a draining day and I just want to rest"}
+{"intent":"none","text":"I had a stressful day and my head is spinning"}
+{"intent":"none","text":"I\u0027m going to sleep on it and decide later"}
+{"intent":"none","text":"I am going to take a walk and clear my head"}
+{"intent":"none","text":"I\u0027m going to think about what you said"}
+{"intent":"none","text":"I want to reflect on how this semester went"}
+{"intent":"none","text":"I\u0027m going to be okay, I just needed to say it out loud"}
+{"intent":"none","text":"I plan to see how I feel tomorrow"}
+{"intent":"ask_today","text":"Show me everything I have today"}
+{"intent":"ask_today","text":"What is everything I have tomorrow?"}
+{"intent":"ask_today","text":"Everything on my plate for tomorrow"}
+{"intent":"ask_today","text":"All I have planned for today"}

@@ -1,0 +1,40 @@
+CREATE TABLE research (
+    id TEXT NOT NULL PRIMARY KEY,
+    updatedAt INTEGER NOT NULL,
+    deleted INTEGER NOT NULL,
+    serverSeq INTEGER NOT NULL DEFAULT 0,
+    syncState TEXT NOT NULL,
+    category TEXT NOT NULL,
+    questionKey TEXT NOT NULL,
+    question TEXT NOT NULL,
+    answerText TEXT NOT NULL,
+    answerJson TEXT NOT NULL,
+    sources TEXT NOT NULL,
+    askedAt INTEGER NOT NULL,
+    expiresAt INTEGER
+);
+selectAll:
+SELECT * FROM research;
+
+selectById:
+SELECT * FROM research WHERE id = ?;
+
+selectPending:
+SELECT * FROM research WHERE syncState = 'PENDING';
+
+upsert:
+INSERT OR REPLACE INTO research VALUES ?;
+
+markSynced:
+UPDATE research SET syncState = 'SYNCED' WHERE id = ? AND updatedAt = ?;
+
+markRejected:
+UPDATE research SET syncState = 'REJECTED' WHERE id = ? AND updatedAt = ?;
+
+selectChangedSince:
+SELECT * FROM research WHERE serverSeq > ? ORDER BY serverSeq ASC;
+selectValid:
+SELECT * FROM research WHERE id = :id AND deleted = 0 AND (expiresAt IS NULL OR expiresAt > :now);
+
+search:
+SELECT * FROM research WHERE deleted = 0 AND (question LIKE '%' || :q || '%' OR answerText LIKE '%' || :q || '%') ORDER BY askedAt DESC;

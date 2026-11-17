@@ -1,0 +1,239 @@
+{"group":"act","text":"add task buy milk","intent":"create_task","slots":{"title":"buy milk"}}
+{"group":"act","text":"add a task: call the dentist tomorrow","intent":"create_task","slots":{"title":"call the dentist","dueDate":"2026-11-13"}}
+{"group":"act","text":"new task, finish the lab report friday","intent":"create_task","slots":{"title":"finish the lab report","dueDate":"2026-11-13"}}
+{"group":"act","text":"todo: renew library card","intent":"create_task","slots":{"title":"renew library card"}}
+{"group":"act","text":"remind me to email the landlord in 3 days","intent":"create_task","slots":{"title":"email the landlord","dueDate":"2026-11-15"}}
+{"group":"act","text":"please add task pick up parcels next week","intent":"create_task","slots":{"title":"pick up parcels","dueDate":"2026-11-19"}}
+{"group":"act","text":"I spent 35 on lunch","intent":"add_spending","slots":{"amount":"35","category":"Food","note":"lunch"}}
+{"group":"act","text":"just paid 120 for the gym","intent":"add_spending","slots":{"amount":"120","category":"Health","note":"the gym"}}
+{"group":"act","text":"spent 18.5 on a taxi","intent":"add_spending","slots":{"amount":"18.5","category":"Transport","note":"a taxi"}}
+{"group":"act","text":"paid 60 shekels for pizza","intent":"add_spending","slots":{"amount":"60","category":"Food","note":"pizza"}}
+{"group":"act","text":"the coffee cost me 14","intent":"add_spending","slots":{"amount":"14","category":"Food","note":"the coffee"}}
+{"group":"act","text":"I spent 200 on a gift","intent":"add_spending","slots":{"amount":"200","category":"Shopping","note":"a gift"}}
+{"group":"act","text":"log a snack: apple and peanut butter","intent":"add_meal","slots":{"type":"SNACK","text":"apple and peanut butter"}}
+{"group":"act","text":"log lunch rice and chicken","intent":"add_meal","slots":{"type":"MEAL","text":"rice and chicken"}}
+{"group":"act","text":"add breakfast: oatmeal with banana","intent":"add_meal","slots":{"type":"MEAL","text":"oatmeal with banana"}}
+{"group":"act","text":"I ate a falafel for lunch","intent":"add_meal","slots":{"type":"MEAL","text":"a falafel"}}
+{"group":"act","text":"I just ate two eggs for breakfast","intent":"add_meal","slots":{"type":"MEAL","text":"two eggs"}}
+{"group":"act","text":"I ate yogurt for a snack","intent":"add_meal","slots":{"type":"SNACK","text":"yogurt"}}
+{"group":"act","text":"check-in: mood 4 energy 3 sleep 3 stress 2","intent":"add_checkin","slots":{"mood":"4","energy":"3","sleepQuality":"3","stress":"2"}}
+{"group":"act","text":"checkin mood 5 energy 4 sleep 4 stress 1","intent":"add_checkin","slots":{"mood":"5","energy":"4","sleepQuality":"4","stress":"1"}}
+{"group":"act","text":"Check-in mood 3, energy 2, sleep 3, stress 4","intent":"add_checkin","slots":{"mood":"3","energy":"2","sleepQuality":"3","stress":"4"}}
+{"group":"act","text":"check in: energy 3 mood 4 stress 2 sleep 5","intent":"add_checkin","slots":{"mood":"4","energy":"3","sleepQuality":"5","stress":"2"}}
+{"group":"act","text":"check-in: mood 2 energy 2 sleep quality 1 stress 5","intent":"add_checkin","slots":{"mood":"2","energy":"2","sleepQuality":"1","stress":"5"}}
+{"group":"act","text":"please check-in mood 4 energy 4 sleep 4 stress 3","intent":"add_checkin","slots":{"mood":"4","energy":"4","sleepQuality":"4","stress":"3"}}
+{"group":"act","text":"journal: today was calm and productive","intent":"add_journal","slots":{"text":"today was calm and productive"}}
+{"group":"act","text":"note to self: bring the charger","intent":"add_journal","slots":{"text":"bring the charger"}}
+{"group":"act","text":"journal, slept badly but the walk helped","intent":"add_journal","slots":{"text":"slept badly but the walk helped"}}
+{"group":"act","text":"Journal: finished the first draft of the essay","intent":"add_journal","slots":{"text":"finished the first draft of the essay"}}
+{"group":"act","text":"journal: felt proud after the presentation","intent":"add_journal","slots":{"text":"felt proud after the presentation"}}
+{"group":"act","text":"note to self: talk to Dana about the group project","intent":"add_journal","slots":{"text":"talk to Dana about the group project"}}
+{"group":"act","text":"I dreamt that I missed the exam","intent":"add_dream","slots":{"text":"I dreamt that I missed the exam"}}
+{"group":"act","text":"I dreamed about flying over the city","intent":"add_dream","slots":{"text":"I dreamed about flying over the city"}}
+{"group":"act","text":"last night I dreamt of my old school","intent":"add_dream","slots":{"text":"last night I dreamt of my old school"}}
+{"group":"act","text":"I dreamt I was late for the bus","intent":"add_dream","slots":{"text":"I dreamt I was late for the bus"}}
+{"group":"act","text":"last night I dreamed the lab flooded","intent":"add_dream","slots":{"text":"last night I dreamed the lab flooded"}}
+{"group":"act","text":"I dreamed of a quiet beach","intent":"add_dream","slots":{"text":"I dreamed of a quiet beach"}}
+{"group":"act","text":"mark the physics homework as done","intent":"mark_task_done","slots":{"name":"physics homework"}}
+{"group":"act","text":"tick off the dentist task","intent":"mark_task_done","slots":{"name":"dentist"}}
+{"group":"act","text":"check off my laundry","intent":"mark_task_done","slots":{"name":"laundry"}}
+{"group":"act","text":"complete the lab report task","intent":"mark_task_done","slots":{"name":"lab report"}}
+{"group":"act","text":"I finished the essay task","intent":"mark_task_done","slots":{"name":"essay"}}
+{"group":"act","text":"mark the grocery list task as finished","intent":"mark_task_done","slots":{"name":"grocery list"}}
+{"group":"act","text":"move the laundry task to friday","intent":"move_task","slots":{"name":"laundry","date":"2026-11-13"}}
+{"group":"act","text":"reschedule my essay task to 2026-12-01","intent":"move_task","slots":{"name":"essay","date":"2026-12-01"}}
+{"group":"act","text":"push the dentist task to next friday","intent":"move_task","slots":{"name":"dentist","date":"2026-11-20"}}
+{"group":"act","text":"postpone the report task to tomorrow","intent":"move_task","slots":{"name":"report","date":"2026-11-13"}}
+{"group":"act","text":"move the rent task to 15/12","intent":"move_task","slots":{"name":"rent","date":"2026-12-15"}}
+{"group":"act","text":"reschedule the invoice task to december 3","intent":"move_task","slots":{"name":"invoice","date":"2026-12-03"}}
+{"group":"act","text":"move the algebra exam to 2026-12-01","intent":"move_exam","slots":{"name":"algebra","date":"2026-12-01"}}
+{"group":"act","text":"reschedule the physics exam to friday at 9am","intent":"move_exam","slots":{"name":"physics","date":"2026-11-13","time":"09:00"}}
+{"group":"act","text":"move my chemistry exam to 20/12","intent":"move_exam","slots":{"name":"chemistry","date":"2026-12-20"}}
+{"group":"act","text":"reschedule the biology exam to next week","intent":"move_exam","slots":{"name":"biology","date":"2026-11-19"}}
+{"group":"act","text":"move the history exam to tomorrow at 14:30","intent":"move_exam","slots":{"name":"history","date":"2026-11-13","time":"14:30"}}
+{"group":"act","text":"move the statistics exam to december 8 at 6:30pm","intent":"move_exam","slots":{"name":"statistics","date":"2026-12-08","time":"18:30"}}
+{"group":"act","text":"find my algebra course","intent":"find","slots":{"name":"algebra","kind":"course"}}
+{"group":"act","text":"open the physics notes","intent":"find","slots":{"name":"physics","kind":"doc"}}
+{"group":"act","text":"show me my thesis goal","intent":"find","slots":{"name":"thesis","kind":"goal"}}
+{"group":"act","text":"find the dentist task","intent":"find","slots":{"name":"dentist","kind":"task"}}
+{"group":"act","text":"open my history exam","intent":"find","slots":{"name":"history","kind":"exam"}}
+{"group":"act","text":"show me the landlord email","intent":"find","slots":{"name":"landlord","kind":"mail"}}
+{"group":"act","text":"what's on today","intent":"ask_today","slots":{}}
+{"group":"act","text":"what do I have today","intent":"ask_today","slots":{}}
+{"group":"act","text":"what is left today","intent":"ask_today","slots":{}}
+{"group":"act","text":"hey wally what's on today","intent":"ask_today","slots":{}}
+{"group":"act","text":"what are my tasks","intent":"ask_tasks","slots":{}}
+{"group":"act","text":"show me my tasks","intent":"ask_tasks","slots":{}}
+{"group":"act","text":"what's due today","intent":"ask_tasks","slots":{"when":"today"}}
+{"group":"act","text":"what is due this week","intent":"ask_tasks","slots":{"when":"week"}}
+{"group":"act","text":"what's on my calendar today","intent":"ask_events","slots":{"day":"2026-11-12"}}
+{"group":"act","text":"what is on my calendar tomorrow","intent":"ask_events","slots":{"day":"2026-11-13"}}
+{"group":"act","text":"any events today","intent":"ask_events","slots":{"day":"2026-11-12"}}
+{"group":"act","text":"any events tomorrow","intent":"ask_events","slots":{"day":"2026-11-13"}}
+{"group":"act","text":"how much have I spent this week","intent":"ask_spending_week","slots":{}}
+{"group":"act","text":"how much did I spend this week","intent":"ask_spending_week","slots":{}}
+{"group":"act","text":"How much did I spend this week?","intent":"ask_spending_week","slots":{}}
+{"group":"convo","text":"thanks wally","intent":"none","slots":{}}
+{"group":"convo","text":"hi","intent":"none","slots":{}}
+{"group":"convo","text":"how are you today","intent":"none","slots":{}}
+{"group":"convo","text":"good morning","intent":"none","slots":{}}
+{"group":"convo","text":"tell me a joke","intent":"none","slots":{}}
+{"group":"convo","text":"I feel tired","intent":"none","slots":{}}
+{"group":"convo","text":"what should I study for the exam","intent":"none","slots":{}}
+{"group":"convo","text":"can you help me plan my week","intent":"none","slots":{}}
+{"group":"convo","text":"why is the sky blue","intent":"none","slots":{}}
+{"group":"convo","text":"what is photosynthesis","intent":"none","slots":{}}
+{"group":"convo","text":"I'm stressed about the exam","intent":"none","slots":{}}
+{"group":"convo","text":"that was a great answer","intent":"none","slots":{}}
+{"group":"convo","text":"explain recursion simply","intent":"none","slots":{}}
+{"group":"convo","text":"do you remember my exam date","intent":"none","slots":{}}
+{"group":"convo","text":"who wrote hamlet","intent":"none","slots":{}}
+{"group":"convo","text":"I need a break","intent":"none","slots":{}}
+{"group":"convo","text":"good night","intent":"none","slots":{}}
+{"group":"convo","text":"what do you think about my schedule","intent":"none","slots":{}}
+{"group":"convo","text":"is it going to rain","intent":"none","slots":{}}
+{"group":"convo","text":"how do I get better at maths","intent":"none","slots":{}}
+{"group":"blocked","text":"lunch will cost 35","intent":"none","slots":{}}
+{"group":"blocked","text":"I'll spend 35 on lunch","intent":"none","slots":{}}
+{"group":"blocked","text":"I didn't spend 35 on lunch","intent":"none","slots":{}}
+{"group":"blocked","text":"I owe Dana 35","intent":"none","slots":{}}
+{"group":"blocked","text":"I got a 35 shekel refund","intent":"none","slots":{}}
+{"group":"blocked","text":"Dana paid for me","intent":"none","slots":{}}
+{"group":"blocked","text":"add task call mom. then add task call dad","intent":"none","slots":{}}
+{"group":"blocked","text":"I spent 35 on lunch and 20 on coffee","intent":"none","slots":{}}
+{"group":"blocked","text":"add task buy milk and mark the report done","intent":"none","slots":{}}
+{"group":"blocked","text":"I almost spent 35 on lunch","intent":"none","slots":{}}
+{"group":"act","text":"I spent 35 on lunch yesterday","intent":"add_spending","slots":{"amount":"35","category":"Food","note":"lunch","date":"2026-11-11"}}
+{"group":"act","text":"log lunch: salad yesterday at 13:00","intent":"add_meal","slots":{"type":"MEAL","text":"salad","date":"2026-11-11","time":"13:00"}}
+{"group":"otherday","text":"I spent 35 on a gift for friday","intent":"none","slots":{}}
+{"group":"act","slots":{"period":"next_week"},"text":"what\u0027s on next week","intent":"ask_events"}
+{"group":"act","slots":{"period":"last_week"},"text":"how much did I spend last week","intent":"ask_spending"}
+{"group":"otherday","text":"I ate pizza for dinner last night","intent":"none","slots":{}}
+{"group":"otherday","text":"I spent 20 on coffee on monday","intent":"none","slots":{}}
+{"group":"lookalike","text":"the task force met today","intent":"none","slots":{}}
+{"group":"lookalike","text":"new task force at work","intent":"none","slots":{}}
+{"group":"lookalike","text":"todo list is getting long","intent":"none","slots":{}}
+{"group":"lookalike","text":"my task list is a mess","intent":"none","slots":{}}
+{"group":"lookalike","text":"add taskbar to the dashboard","intent":"none","slots":{}}
+{"group":"lookalike","text":"I spent too long on lunch","intent":"none","slots":{}}
+{"group":"lookalike","text":"I spent the whole day on the essay","intent":"none","slots":{}}
+{"group":"lookalike","text":"I paid attention in class","intent":"none","slots":{}}
+{"group":"lookalike","text":"Dana paid 35 for lunch","intent":"none","slots":{}}
+{"group":"lookalike","text":"spent 35 minutes on lunch","intent":"none","slots":{}}
+{"group":"lookalike","text":"I had guests for dinner","intent":"none","slots":{}}
+{"group":"lookalike","text":"I ate too much for dinner","intent":"none","slots":{}}
+{"group":"lookalike","text":"I ate out for lunch","intent":"none","slots":{}}
+{"group":"lookalike","text":"I had lunch with Dana at 1","intent":"none","slots":{}}
+{"group":"lookalike","text":"dinner was at 8","intent":"none","slots":{}}
+{"group":"lookalike","text":"check-in time is at 5","intent":"none","slots":{}}
+{"group":"lookalike","text":"I checked in at the hotel","intent":"none","slots":{}}
+{"group":"lookalike","text":"check in at the gym","intent":"none","slots":{}}
+{"group":"lookalike","text":"checkin counter closes soon","intent":"none","slots":{}}
+{"group":"lookalike","text":"check-in feels useless","intent":"none","slots":{}}
+{"group":"lookalike","text":"my journal is full","intent":"none","slots":{}}
+{"group":"lookalike","text":"journal entries are fun","intent":"none","slots":{}}
+{"group":"lookalike","text":"the journal article was long","intent":"none","slots":{}}
+{"group":"lookalike","text":"note to self is a good habit","intent":"none","slots":{}}
+{"group":"lookalike","text":"journaling helps me think","intent":"none","slots":{}}
+{"group":"lookalike","text":"I had a dream job once","intent":"none","slots":{}}
+{"group":"lookalike","text":"I dreamed of being a pilot as a kid","intent":"none","slots":{}}
+{"group":"lookalike","text":"my dream is to travel","intent":"none","slots":{}}
+{"group":"lookalike","text":"the dream team won today","intent":"none","slots":{}}
+{"group":"lookalike","text":"dream big this semester","intent":"none","slots":{}}
+{"group":"otherkind","text":"add lunch with Dana at 1","intent":"none","slots":{}}
+{"group":"otherkind","text":"add a note about the exam","intent":"none","slots":{}}
+{"group":"otherkind","text":"add event dentist at 4","intent":"none","slots":{}}
+{"group":"otherkind","text":"add meeting with the advisor on friday","intent":"none","slots":{}}
+{"group":"otherkind","text":"add a reminder to call mom","intent":"none","slots":{}}
+{"group":"otherkind","text":"add dentist appointment tomorrow","intent":"none","slots":{}}
+{"group":"otherkind","text":"add exam on 15/03 to my calendar","intent":"none","slots":{}}
+{"group":"otherkind","text":"add a goal to run 5k","intent":"none","slots":{}}
+{"group":"otherkind","text":"add milk to the shopping list","intent":"none","slots":{}}
+{"group":"otherkind","text":"add Dana to my contacts","intent":"none","slots":{}}
+{"group":"act","text":"create a task: water the herbs","intent":"create_task","slots":{"title":"water the herbs"}}
+{"group":"act","text":"put task wash the car tomorrow","intent":"create_task","slots":{"title":"wash the car","dueDate":"2026-11-13"}}
+{"group":"act","text":"I spent 42 on sushi","intent":"add_spending","slots":{"amount":"42","category":"Food","note":"sushi"}}
+{"group":"act","text":"paid 120 for a new jacket","intent":"add_spending","slots":{"amount":"120","category":"Shopping","note":"a new jacket"}}
+{"group":"act","text":"add to my journal that the exam went fine","intent":"add_journal","slots":{"text":"the exam went fine"}}
+{"group":"act","text":"find my physics","intent":"find","slots":{"name":"physics","kind":"any"}}
+{"group":"act","text":"change my algebra exam to 5 December","intent":"move_exam","slots":{"name":"algebra","date":"2026-12-05"}}
+{"group":"act","text":"move the dentist call to friday","intent":"move_task","slots":{"name":"dentist call","date":"2026-11-13","loose":"1"}}
+{"group":"act","text":"how much money did I blow this week","intent":"ask_spending_week","slots":{}}
+{"group":"lookalike","text":"create a task force","intent":"none","slots":{}}
+{"group":"lookalike","text":"I spent 30 on a gift and a burger","intent":"none","slots":{}}
+{"group":"lookalike","text":"add to my journal that I will quit","intent":"none","slots":{}}
+{"group":"lookalike","text":"find my calendar","intent":"none","slots":{}}
+{"group":"lookalike","text":"how much money did I earn this week","intent":"none","slots":{}}
+{"group":"lookalike","text":"change my algebra exam to 31 February","intent":"none","slots":{}}
+{"group":"act","text":"diary entry: a quiet evening","intent":"add_journal","slots":{"text":"a quiet evening"}}
+{"group":"act","text":"postpone the biology exam to friday","intent":"move_exam","slots":{"name":"biology","date":"2026-11-13"}}
+{"group":"act","text":"delay the visa task until monday","intent":"move_task","slots":{"name":"visa","date":"2026-11-16"}}
+{"group":"act","text":"search for passport","intent":"find","slots":{"name":"passport","kind":"any"}}
+{"group":"act","text":"expenses this week","intent":"ask_spending_week","slots":{}}
+{"group":"act","text":"today's agenda","intent":"ask_events","slots":{"day":"2026-11-12"}}
+{"group":"act","text":"bought sneakers for 300 shekels","intent":"add_spending","slots":{"amount":"300","category":"Shopping","note":"sneakers"}}
+{"group":"lookalike","text":"got shoes for 300","intent":"none","slots":{}}
+{"group":"lookalike","text":"we got a table for 4","intent":"none","slots":{}}
+{"group":"lookalike","text":"expenses","intent":"none","slots":{}}
+{"group":"lookalike","text":"postpone the exam","intent":"none","slots":{}}
+{"group":"lookalike","text":"search for the calendar","intent":"none","slots":{}}
+{"group":"act","slots":{"period":"yesterday"},"text":"how much did I spend yesterday","intent":"ask_spending"}
+{"group":"act","slots":{"period":"last_week","category":"Transport"},"text":"what did I spend on transport last week","intent":"ask_spending"}
+{"group":"act","slots":{"period":"this_month","category":"Shopping"},"text":"how much money have I spent on clothes this month","intent":"ask_spending"}
+{"group":"act","slots":{"period":"last_month"},"text":"my spending last month","intent":"ask_spending"}
+{"group":"act","slots":{"period":"weekday:monday"},"text":"my expenses on Monday","intent":"ask_spending"}
+{"group":"act","slots":{"period":"month:october","category":"Food"},"text":"how much did I spend on food in october","intent":"ask_spending"}
+{"group":"act","slots":{"period":"date:2026-11-05"},"text":"what did I spend on 5/11","intent":"ask_spending"}
+{"group":"act","slots":{"day":"2026-11-13"},"text":"what\u0027s on friday","intent":"ask_events"}
+{"group":"act","slots":{"period":"next_week"},"text":"what\u0027s on my calendar next week","intent":"ask_events"}
+{"group":"act","slots":{"period":"this_week"},"text":"any events this week","intent":"ask_events"}
+{"group":"act","slots":{"day":"2026-11-13"},"text":"my schedule for tomorrow","intent":"ask_events"}
+{"group":"act","slots":{"day":"2026-11-13"},"text":"friday\u0027s agenda","intent":"ask_events"}
+{"group":"act","slots":{"day":"2026-11-20"},"text":"what is on my calendar on 20/11","intent":"ask_events"}
+{"group":"act","slots":{"day":"2026-11-20"},"text":"events next friday","intent":"ask_events"}
+{"group":"act","slots":{"period":"weekday:friday"},"text":"what\u0027s due friday","intent":"ask_tasks"}
+{"group":"act","slots":{"period":"next_week"},"text":"tasks due next week","intent":"ask_tasks"}
+{"group":"act","slots":{"period":"this_month"},"text":"what is due this month","intent":"ask_tasks"}
+{"group":"act","slots":{"when":"tomorrow"},"text":"my tasks due tomorrow","intent":"ask_tasks"}
+{"group":"act","slots":{},"text":"when is my next exam","intent":"ask_exam"}
+{"group":"act","slots":{},"text":"my upcoming exams","intent":"ask_exam"}
+{"group":"act","slots":{"name":"organic chemistry"},"text":"when\u0027s the organic chemistry exam","intent":"ask_exam"}
+{"group":"act","slots":{"name":"physics"},"text":"when is my physics exam","intent":"ask_exam"}
+{"group":"act","slots":{"metric":"sleep","period":"last_night"},"text":"how long did I sleep last night","intent":"ask_health"}
+{"group":"act","slots":{"metric":"sleep","period":"yesterday"},"text":"my sleep yesterday","intent":"ask_health"}
+{"group":"act","slots":{"metric":"steps","period":"this_week"},"text":"how many steps did I take this week","intent":"ask_health"}
+{"group":"act","slots":{"metric":"steps","period":"last_week"},"text":"my steps last week","intent":"ask_health"}
+{"group":"act","slots":{"metric":"heart","period":"weekday:monday"},"text":"my resting heart rate on monday","intent":"ask_health"}
+{"group":"act","slots":{"what":"list","period":"yesterday"},"text":"what did I eat yesterday","intent":"ask_meals"}
+{"group":"act","slots":{"what":"list","period":"weekday:tuesday"},"text":"my meals on tuesday","intent":"ask_meals"}
+{"group":"act","slots":{"what":"calories","period":"today"},"text":"how many calories did I eat today","intent":"ask_meals"}
+{"group":"act","slots":{"what":"calories","period":"yesterday"},"text":"my calories yesterday","intent":"ask_meals"}
+{"group":"act","slots":{"period":"yesterday"},"text":"how was my mood yesterday","intent":"ask_checkin"}
+{"group":"act","slots":{"period":"last_week"},"text":"my check-in last week","intent":"ask_checkin"}
+{"group":"act","slots":{"period":"weekday:friday"},"text":"how was my energy on friday","intent":"ask_checkin"}
+{"group":"lookalike","slots":{},"text":"how much did I spend yesterday and today","intent":"none"}
+{"group":"lookalike","slots":{},"text":"what\u0027s on friday and saturday","intent":"none"}
+{"group":"lookalike","slots":{},"text":"when is the exam on friday","intent":"none"}
+{"group":"lookalike","slots":{},"text":"how did I sleep last month","intent":"none"}
+{"group":"lookalike","slots":{},"text":"what did I eat next week","intent":"none"}
+{"group":"lookalike","slots":{},"text":"mood","intent":"none"}
+{"group":"otherday","text":"what did I do last week","intent":"none","slots":{}}
+{"group":"otherday","text":"show me everything from last month","intent":"none","slots":{}}
+{"group":"act","text":"when's the math exam","intent":"ask_exam","slots":{"name":"math"}}
+{"group":"act","text":"when is my calculus exam","intent":"ask_exam","slots":{"name":"calculus"}}
+{"group":"act","text":"what's my food spending yesterday","intent":"ask_spending","slots":{"period":"yesterday","category":"Food"}}
+{"group":"act","text":"what was my total spending last week","intent":"ask_spending","slots":{"period":"last_week"}}
+{"group":"act","text":"food spending last month","intent":"ask_spending","slots":{"period":"last_month","category":"Food"}}
+{"group":"act","text":"what do I have due on friday","intent":"ask_tasks","slots":{"period":"weekday:friday"}}
+{"group":"act","text":"anything due next week","intent":"ask_tasks","slots":{"period":"next_week"}}
+{"group":"act","text":"what date is the physics exam","intent":"ask_exam","slots":{"name":"physics"}}
+{"group":"act","text":"when does the law exam take place","intent":"ask_exam","slots":{"name":"law"}}
+{"group":"act","text":"when do I have my next exam","intent":"ask_exam","slots":{}}
+{"group":"act","text":"had pasta for lunch","intent":"add_meal","slots":{"type":"MEAL","text":"pasta"}}
+{"group":"act","text":"I had a bagel as a snack","intent":"add_meal","slots":{"type":"SNACK","text":"a bagel"}}
+{"group":"act","text":"rough day but mood 4, energy 3, sleep 5, stress 2","intent":"add_checkin","slots":{"mood":"4","energy":"3","sleepQuality":"5","stress":"2"}}
+{"group":"lookalike","text":"I had a meeting for lunch","intent":"none","slots":{}}
+{"group":"lookalike","text":"I had guests for dinner","intent":"none","slots":{}}
+{"group":"lookalike","text":"when do I have the math exam and the law exam","intent":"none","slots":{}}
+{"group":"lookalike","text":"food spending","intent":"none","slots":{}}
+{"group":"lookalike","text":"mood 4 energy 3 sleep 5","intent":"none","slots":{}}

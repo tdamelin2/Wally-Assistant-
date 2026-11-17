@@ -1,0 +1,85 @@
+{"group":"ask","text":"what have I got on today then","intent":"ask_today"}
+{"group":"ask","text":"can you tell me how my day is shaping up","intent":"ask_today"}
+{"group":"ask","text":"give me the rundown for today","intent":"ask_today"}
+{"group":"ask","text":"what am I up to today","intent":"ask_today"}
+{"group":"ask","text":"so what\u0027s happening with my day","intent":"ask_today"}
+{"group":"ask","text":"list what I have to do today","intent":"ask_today"}
+{"group":"ask","text":"I want to know what is coming up today","intent":"ask_today"}
+{"group":"ask","text":"which tasks haven\u0027t I done yet","intent":"ask_tasks"}
+{"group":"ask","text":"what\u0027s still open on my to-do list","intent":"ask_tasks"}
+{"group":"ask","text":"give me my outstanding tasks","intent":"ask_tasks"}
+{"group":"ask","text":"what do I need to finish soon","intent":"ask_tasks"}
+{"group":"ask","text":"list the tasks I have left","intent":"ask_tasks"}
+{"group":"ask","text":"what homework do I have pending","intent":"ask_tasks"}
+{"group":"ask","text":"show my unfinished tasks","intent":"ask_tasks"}
+{"group":"ask","text":"what\u0027s on the to-do list right now","intent":"ask_tasks"}
+{"group":"ask","text":"what\u0027s on my calendar for tomorrow","intent":"ask_events"}
+{"group":"ask","text":"do I have lectures on Thursday","intent":"ask_events"}
+{"group":"ask","text":"show me what is scheduled this Friday","intent":"ask_events"}
+{"group":"ask","text":"which meetings do I have on Monday","intent":"ask_events"}
+{"group":"ask","text":"what is on the calendar for Sunday","intent":"ask_events"}
+{"group":"ask","text":"am I busy on Tuesday","intent":"ask_events"}
+{"group":"ask","text":"what\u0027s my schedule on Wednesday","intent":"ask_events"}
+{"group":"ask","text":"tell me about the events on the 18th","intent":"ask_events"}
+{"group":"ask","text":"how much money did I use up this week","intent":"ask_spending_week"}
+{"group":"ask","text":"what did my week cost me so far","intent":"ask_spending_week"}
+{"group":"ask","text":"what are my expenses for the past week","intent":"ask_spending_week"}
+{"group":"ask","text":"tell me how much I\u0027ve spent since Sunday","intent":"ask_spending_week"}
+{"group":"ask","text":"what is my spending looking like this week","intent":"ask_spending_week"}
+{"group":"ask","text":"how much have I paid out this week","intent":"ask_spending_week"}
+{"group":"ask","text":"show me my total spending for this week","intent":"ask_spending_week"}
+{"group":"passup","text":"put the dentist on my list for tomorrow","intent":"none"}
+{"group":"passup","text":"I paid 35 for my lunch","intent":"none"}
+{"group":"passup","text":"jot down that I had pasta for dinner","intent":"none"}
+{"group":"passup","text":"note in my diary that I felt good","intent":"none"}
+{"group":"passup","text":"mark the poster task finished","intent":"none"}
+{"group":"passup","text":"shift the lab report task to Friday","intent":"none"}
+{"group":"passup","text":"the biology exam moved to the 14th","intent":"none"}
+{"group":"passup","text":"look for my notes about algebra","intent":"none"}
+{"group":"passup","text":"my check-in: mood 3, energy 3, sleep 4, stress 2","intent":"none"}
+{"group":"passup","text":"add a reminder to buy milk","intent":"none"}
+{"group":"passup","text":"I bought a book for 70","intent":"none"}
+{"group":"passup","text":"I ate a banana an hour ago","intent":"none"}
+{"group":"passup","text":"cross the laundry task off","intent":"none"}
+{"group":"passup","text":"reschedule the algebra exam to Monday at 9","intent":"none"}
+{"group":"passup","text":"find the email from the bank","intent":"none"}
+{"group":"passup","text":"remind me to call my mother on Sunday","intent":"none"}
+{"group":"passup","text":"spent 14 on the bus","intent":"none"}
+{"group":"passup","text":"write in the journal that today was calm","intent":"none"}
+{"group":"passup","text":"push the reading task to next week","intent":"none"}
+{"group":"passup","text":"log breakfast: toast and eggs","intent":"none"}
+{"group":"convo","text":"thanks a lot, that helps","intent":"none"}
+{"group":"convo","text":"how do you feel about exams","intent":"none"}
+{"group":"convo","text":"can you give me a study tip","intent":"none"}
+{"group":"convo","text":"I\u0027m tired and a bit stressed","intent":"none"}
+{"group":"convo","text":"what is photosynthesis","intent":"none"}
+{"group":"convo","text":"good night","intent":"none"}
+{"group":"convo","text":"tell me something interesting","intent":"none"}
+{"group":"convo","text":"do you think I should take a break","intent":"none"}
+{"group":"convo","text":"what\u0027s the best way to memorize vocabulary","intent":"none"}
+{"group":"convo","text":"I had a rough morning","intent":"none"}
+{"group":"convo","text":"can you explain recursion","intent":"none"}
+{"group":"convo","text":"how do I stay motivated","intent":"none"}
+{"group":"convo","text":"hello there","intent":"none"}
+{"group":"convo","text":"why do cats purr","intent":"none"}
+{"group":"convo","text":"what should I make for dinner","intent":"none"}
+{"group":"lookalike","text":"which tasks did I finish last month","intent":"none"}
+{"group":"lookalike","text":"where is my Thursday lecture located","intent":"none"}
+{"group":"lookalike","text":"how much did I spend on food this week","intent":"none"}
+{"group":"lookalike","text":"what did I spend on transport last month","intent":"none"}
+{"group":"lookalike","text":"who is coming to Friday\u0027s meeting","intent":"none"}
+{"group":"lookalike","text":"what was the last task I completed","intent":"none"}
+{"group":"lookalike","text":"how many exams do I have this semester","intent":"none"}
+{"group":"ask","text":"what was my mood yesterday","intent":"ask_checkin"}
+{"group":"lookalike","text":"what time does the library close today","intent":"none"}
+{"group":"lookalike","text":"how much did I spend in total this year","intent":"none"}
+{"group":"ask","text":"how much money left my account last month","intent":"ask_spending"}
+{"group":"ask","text":"what's my outgoings total for yesterday","intent":"ask_spending"}
+{"group":"ask","text":"any idea when the next exam is","intent":"ask_exam"}
+{"group":"ask","text":"how many hours of sleep did I log last night","intent":"ask_health"}
+{"group":"ask","text":"what's my step tally for yesterday","intent":"ask_health"}
+{"group":"ask","text":"how many calories have I taken in today","intent":"ask_meals"}
+{"group":"ask","text":"what all did I eat yesterday","intent":"ask_meals"}
+{"group":"ask","text":"what did I rate my energy yesterday","intent":"ask_checkin"}
+{"group":"ask","text":"how was my overall mood this week","intent":"ask_checkin"}
+{"group":"lookalike","text":"which exams do I have next week","intent":"none"}

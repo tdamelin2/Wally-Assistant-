@@ -1,0 +1,35 @@
+CREATE TABLE cal_event (
+    id TEXT NOT NULL PRIMARY KEY,
+    updatedAt INTEGER NOT NULL,
+    deleted INTEGER NOT NULL,
+    serverSeq INTEGER NOT NULL DEFAULT 0,
+    syncState TEXT NOT NULL,
+    calendarId TEXT NOT NULL,
+    eventId TEXT NOT NULL,
+    title TEXT NOT NULL,
+    startAt INTEGER NOT NULL,
+    endAt INTEGER NOT NULL,
+    allDay INTEGER NOT NULL,
+    location TEXT
+);
+
+selectAll:
+SELECT * FROM cal_event;
+
+selectById:
+SELECT * FROM cal_event WHERE id = ?;
+
+selectPending:
+SELECT * FROM cal_event WHERE syncState = 'PENDING';
+
+upsert:
+INSERT OR REPLACE INTO cal_event VALUES ?;
+
+markSynced:
+UPDATE cal_event SET syncState = 'SYNCED' WHERE id = ? AND updatedAt = ?;
+
+markRejected:
+UPDATE cal_event SET syncState = 'REJECTED' WHERE id = ? AND updatedAt = ?;
+
+selectChangedSince:
+SELECT * FROM cal_event WHERE serverSeq > ? ORDER BY serverSeq ASC;

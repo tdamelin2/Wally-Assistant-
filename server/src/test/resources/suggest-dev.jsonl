@@ -1,0 +1,92 @@
+{"group":"cmd","text":"coffee and a croissant ran me 22","tool":"add_spending"}
+{"group":"cmd","text":"the taxi home was 48 shekels","tool":"add_spending"}
+{"group":"cmd","text":"dropped 120 at the pharmacy","tool":"add_spending"}
+{"group":"cmd","text":"groceries came to 310","tool":"add_spending"}
+{"group":"cmd","text":"my phone bill hit 89","tool":"add_spending"}
+{"group":"cmd","text":"movie tickets came out to 64","tool":"add_spending"}
+{"group":"cmd","text":"bought new shoes, 250","tool":"add_spending"}
+{"group":"cmd","text":"parking ate 15 shekels","tool":"add_spending"}
+{"group":"cmd","text":"fell for a 40 shekel falafel","tool":"add_spending"}
+{"group":"cmd","text":"the gym membership was 180","tool":"add_spending"}
+{"group":"cmd","text":"had scrambled eggs and toast","tool":"add_meal"}
+{"group":"cmd","text":"ate a bowl of pasta","tool":"add_meal"}
+{"group":"cmd","text":"grabbed a banana on the way","tool":"add_meal"}
+{"group":"cmd","text":"finished some leftover rice and chicken","tool":"add_meal"}
+{"group":"cmd","text":"snacked on almonds","tool":"add_meal"}
+{"group":"cmd","text":"breakfast was oatmeal with berries","tool":"add_meal"}
+{"group":"cmd","text":"need to renew my passport","tool":"create_task"}
+{"group":"cmd","text":"remind myself to water the plants","tool":"create_task"}
+{"group":"cmd","text":"put booking the dentist on my todo","tool":"create_task"}
+{"group":"cmd","text":"I should email the landlord","tool":"create_task"}
+{"group":"cmd","text":"remember to print the forms","tool":"create_task"}
+{"group":"cmd","text":"gotta pick up the parcel tomorrow","tool":"create_task"}
+{"group":"cmd","text":"put in my diary that today felt strangely calm and I liked it","tool":"add_journal"}
+{"group":"cmd","text":"write down that I am proud of how the presentation went","tool":"add_journal"}
+{"group":"cmd","text":"jot down that I am feeling restless about the future lately","tool":"add_journal"}
+{"group":"cmd","text":"note to self slow down on the weekends","tool":"add_journal"}
+{"group":"cmd","text":"checking in, mood 4, energy 3, sleep 5, stress 2","tool":"add_checkin"}
+{"group":"cmd","text":"quick check-in mood 3 energy 2 sleep 3 stress 4","tool":"add_checkin"}
+{"group":"cmd","text":"daily check in, mood 5 energy 4 sleep 4 stress 1","tool":"add_checkin"}
+{"group":"cmd","text":"laundry is finished","tool":"update_task"}
+{"group":"cmd","text":"wrapped up the math homework","tool":"update_task"}
+{"group":"cmd","text":"all set with buy gift","tool":"update_task"}
+{"group":"cmd","text":"what is my schedule looking like tomorrow","tool":"ask","intent":"ask_events"}
+{"group":"cmd","text":"how much money went out this week","tool":"ask","intent":"ask_spending_week"}
+{"group":"cmd","text":"any homework due friday","tool":"ask","intent":"ask_tasks"}
+{"group":"cmd","text":"when is the next test coming","tool":"ask","intent":"ask_exam"}
+{"group":"cmd","text":"how many steps did I take yesterday","tool":"ask","intent":"ask_health"}
+{"group":"cmd","text":"what did I eat yesterday","tool":"ask","intent":"ask_meals"}
+{"group":"cmd","text":"how was my mood last week","tool":"ask","intent":"ask_checkin"}
+{"group":"cmd","text":"anything on my plate today","tool":"ask","intent":"ask_today"}
+{"group":"convo","text":"good morning Wally"}
+{"group":"convo","text":"thanks, that was helpful"}
+{"group":"convo","text":"tell me a joke"}
+{"group":"convo","text":"what do you think about learning piano"}
+{"group":"convo","text":"I am feeling a bit overwhelmed with everything"}
+{"group":"convo","text":"can you explain how compound interest works"}
+{"group":"convo","text":"why is the sky blue"}
+{"group":"convo","text":"that makes sense"}
+{"group":"convo","text":"I need to calm down before the exam"}
+{"group":"convo","text":"who won the world cup in 2014"}
+{"group":"convo","text":"recommend a good book about habits"}
+{"group":"convo","text":"my cat keeps waking me up"}
+{"group":"convo","text":"what is the capital of Australia"}
+{"group":"convo","text":"give me a motivational quote"}
+{"group":"convo","text":"I wonder whether to change my major"}
+{"group":"convo","text":"how do I make my study sessions more effective"}
+{"group":"convo","text":"you are really good at this"}
+{"group":"convo","text":"let us talk about something else"}
+{"group":"convo","text":"my friend is visiting next month and I am excited"}
+{"group":"convo","text":"help me think through a hard decision"}
+{"group":"convo","text":"I love autumn weather"}
+{"group":"convo","text":"what is a healthy dinner idea"}
+{"group":"convo","text":"is it normal to feel tired after lunch"}
+{"group":"convo","text":"tell me about the history of coffee"}
+{"group":"convo","text":"I keep procrastinating on my thesis"}
+{"group":"convo","text":"do you remember what we talked about"}
+{"group":"convo","text":"sounds good, see you later"}
+{"group":"convo","text":"how does a bill become law"}
+{"group":"convo","text":"my sister called me earlier"}
+{"group":"convo","text":"I am proud of myself"}
+{"group":"convo","text":"I need to vent"}
+{"group":"convo","text":"I should stop worrying"}
+{"group":"convo","text":"I want to get better at saying no"}
+{"group":"convo","text":"I might switch to a different study plan someday"}
+{"group":"convo","text":"I am going to think about it tonight"}
+{"group":"convo","text":"I would love to travel more"}
+{"group":"convo","text":"if only I had more time"}
+{"group":"convo","text":"I have to admit I am scared of the exam"}
+{"group":"convo","text":"I will figure it out eventually"}
+{"group":"convo","text":"budget meetings stress me out"}
+{"group":"convo","text":"I had a really long day and I feel completely exhausted"}
+{"group":"convo","text":"I had a rough morning and I am wiped out now"}
+{"group":"convo","text":"I had a bad day, honestly I am so tired"}
+{"group":"convo","text":"I had a terrible week and feel drained"}
+{"group":"convo","text":"I want to be more patient with my brother"}
+{"group":"convo","text":"I am going to miss this semester when it ends"}
+{"group":"convo","text":"I want to understand why I get nervous before presentations"}
+{"group":"convo","text":"I need to sleep on this decision"}
+{"group":"convo","text":"I should probably talk to my mentor about my thesis"}
+{"group":"convo","text":"I am gonna be thinking about that movie for days"}
+{"group":"convo","text":"I plan to take it slow this evening"}
+{"group":"convo","text":"I have to say the lecture was inspiring"}

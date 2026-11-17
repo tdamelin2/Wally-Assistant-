@@ -1,0 +1,14 @@
+[Unit]
+Description=Personal assistant server
+After=tailscaled.service network-online.target
+Wants=network-online.target
+
+[Service]
+User=assistant
+UMask=0077
+ExecStart=/usr/bin/java -Xmx512m -jar /opt/assistant/server.jar
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,60 @@
+{"id":"h01","text":"add task buy birthday present","expect":"create_task","args":{"title":"buy birthday present"}}
+{"id":"h02","text":"new task: print the lab report tomorrow","expect":"create_task","args":{"title":"print the lab report","dueDate":"{tomorrow}"}}
+{"id":"h03","text":"add a task to book train tickets for Sunday","expect":"create_task","args":{"title":"book train tickets","dueDate":"{sunday}"}}
+{"id":"h04","text":"add task: pick up the dry cleaning","expect":"create_task","args":{"title":"pick up the dry cleaning"}}
+{"id":"h05","text":"add task water the plants tomorrow","expect":"create_task","args":{"title":"water the plants","dueDate":"{tomorrow}"}}
+{"id":"h06","text":"log breakfast two eggs and toast","expect":"add_meal","args":{"type":"MEAL","text":"two eggs and toast","date":"{today}"}}
+{"id":"h07","text":"I ate a banana for a snack","expect":"add_meal","args":{"type":"SNACK","text":"banana","date":"{today}"}}
+{"id":"h08","text":"log lunch chicken and rice","expect":"add_meal","args":{"type":"MEAL","text":"chicken and rice","date":"{today}"}}
+{"id":"h09","text":"log snack a handful of almonds","expect":"add_meal","args":{"type":"SNACK","text":"almonds","date":"{today}"}}
+{"id":"h10","text":"I ate pasta for dinner","expect":"add_meal","args":{"type":"MEAL","text":"pasta","date":"{today}"}}
+{"id":"h11","text":"spent 42 on a falafel","expect":"add_spending","args":{"amount":"42","category":"Food","date":"{today}"}}
+{"id":"h12","text":"I paid 18 for the bus","expect":"add_spending","args":{"amount":"18","category":"Transport","date":"{today}"}}
+{"id":"h13","text":"coffee cost me 14","expect":"add_spending","args":{"amount":"14","category":"Food","date":"{today}"}}
+{"id":"h14","text":"bought a new jacket 450 shekels","expect":"add_spending","args":{"amount":"450","category":"Shopping","date":"{today}"}}
+{"id":"h15","text":"I paid 60 for the electricity bill","expect":"add_spending","args":{"amount":"60","category":"Bills","date":"{today}"}}
+{"id":"h16","text":"check-in: mood 3, energy 5, sleep 2, stress 4","expect":"add_checkin","args":{"mood":3,"energy":5,"sleepQuality":2,"stress":4,"date":"{today}"}}
+{"id":"h17","text":"check in mood 1 energy 3 sleep 4 stress 5","expect":"add_checkin","args":{"mood":1,"energy":3,"sleepQuality":4,"stress":5,"date":"{today}"}}
+{"id":"h18","text":"checkin mood 4 energy 5 sleep 3 stress 2","expect":"add_checkin","args":{"mood":4,"energy":5,"sleepQuality":3,"stress":2,"date":"{today}"}}
+{"id":"h19","text":"journal: today I finally understood recursion","expect":"add_journal","args":{"text":"understood recursion"}}
+{"id":"h20","text":"dear diary, finally finished the lab report","expect":"add_journal","args":{"text":"finally finished the lab report"}}
+{"id":"h21","text":"journal: feeling calm after the long walk","expect":"add_journal","args":{"text":"calm after the long walk"}}
+{"id":"h22","text":"I dreamt I was flying over the sea","expect":"add_dream","args":{"text":"flying over the sea","date":"{today}"}}
+{"id":"h23","text":"I dreamed that I missed my train","expect":"add_dream","args":{"text":"missed my train","date":"{today}"}}
+{"id":"h24","text":"can you shift read chapter 6 to tomorrow","expect":"move_task","args":{"target":"read chapter 6","dueDate":"{tomorrow}"}}
+{"id":"h25","text":"move buy groceries to Sunday","expect":"move_task","args":{"target":"buy groceries","dueDate":"{sunday}"}}
+{"id":"h26","text":"mark read chapter 5 as done","expect":"mark_task_done","args":{"target":"read chapter 5","done":true}}
+{"id":"h27","text":"tick off renew library books","expect":"mark_task_done","args":{"target":"renew library books","done":true}}
+{"id":"h28","text":"mark email professor Levi as done","expect":"mark_task_done","args":{"target":"email professor Levi","done":true}}
+{"id":"h29","text":"did I write anything about library books","expect":"find","args":{"answerContains":["library books"]}}
+{"id":"h30","text":"find the calculus exam","expect":"find","args":{"answerContains":["Calculus"]}}
+{"id":"h31","text":"move the physics exam to December 22","expect":"move_exam","args":{"target":"physics","localDate":"2026-12-22"}}
+{"id":"h32","text":"the linear algebra exam is now on January 12","expect":"move_exam","args":{"target":"linear algebra","localDate":"2027-01-12"}}
+{"id":"h33","text":"do I have any events today","expect":"ask_events","args":{"answerContains":["Physics lecture"]}}
+{"id":"h34","text":"give me an overview of today","expect":"ask_today","args":{"answerContains":["Physics lecture"]}}
+{"id":"h35","text":"what's the plan for today?","expect":"ask_today","args":{"answerContains":["Physics lecture"]}}
+{"id":"h36","text":"what's happening today","expect":"ask_today","args":{"answerContains":["Physics lecture"]}}
+{"id":"h37","text":"which tasks are still open","expect":"ask_tasks","args":{"answerContains":["buy groceries"]}}
+{"id":"h38","text":"list my tasks","expect":"ask_tasks","args":{"answerContains":["buy groceries"]}}
+{"id":"h39","text":"show my open tasks","expect":"ask_tasks","args":{"answerContains":["buy groceries"]}}
+{"id":"h40","text":"any events on my calendar today","expect":"ask_events","args":{"answerContains":["Physics lecture"]}}
+{"id":"h41","text":"events for today","expect":"ask_events","args":{"answerContains":["Physics lecture"]}}
+{"id":"h42","text":"how much cash have I paid out so far this week","expect":"ask_spending_week","args":{"answerContains":["103"]}}
+{"id":"h43","text":"what is my spending this week?","expect":"ask_spending_week","args":{"answerContains":["103"]}}
+{"id":"h44","text":"what did I end up spending over this past week","expect":"ask_spending_week","args":{"answerContains":["103"]}}
+{"id":"h45","text":"anything planned for today","expect":"ask_today","args":{"answerContains":["Physics lecture"]}}
+{"id":"h46","text":"what does my day look like","expect":"ask_today","args":{"answerContains":["Physics lecture"]}}
+{"id":"h47","text":"what's left on my to-do list","expect":"ask_tasks","args":{"answerContains":["buy groceries"]}}
+{"id":"h48","text":"what's still on my task list","expect":"ask_tasks","args":{"answerContains":["buy groceries"]}}
+{"id":"h49","text":"what is on my calendar today","expect":"ask_events","args":{"answerContains":["Physics lecture"]}}
+{"id":"h50","text":"tell me which meetings are on my calendar today","expect":"ask_events","args":{"answerContains":["Physics lecture"]}}
+{"id":"h51","text":"my expenses so far this week","expect":"ask_spending_week","args":{"answerContains":["103"]}}
+{"id":"h52","text":"total I have spent so far this week","expect":"ask_spending_week","args":{"answerContains":["103"]}}
+{"id":"h53","text":"how are you doing today","expect":"pass_up","args":{}}
+{"id":"h54","text":"thanks, that helps","expect":"pass_up","args":{}}
+{"id":"h55","text":"say something funny","expect":"pass_up","args":{}}
+{"id":"h56","text":"how do magnets work","expect":"pass_up","args":{}}
+{"id":"h57","text":"I'm kind of tired of studying","expect":"pass_up","args":{}}
+{"id":"h58","text":"מה מחכה לי היום","expect":"ask_today","args":{"answerContains":["Physics lecture"]}}
+{"id":"h59","text":"תראה לי את היום שלי","expect":"ask_today","args":{"answerContains":["Physics lecture"]}}
+{"id":"h60","text":"הוסף משימה לקנות חלב","expect":"pass_up","args":{}}

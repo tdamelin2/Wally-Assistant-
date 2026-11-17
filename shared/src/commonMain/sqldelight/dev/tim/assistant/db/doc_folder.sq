@@ -1,0 +1,29 @@
+CREATE TABLE doc_folder (
+    id TEXT NOT NULL PRIMARY KEY,
+    updatedAt INTEGER NOT NULL,
+    deleted INTEGER NOT NULL,
+    serverSeq INTEGER NOT NULL DEFAULT 0,
+    syncState TEXT NOT NULL,
+    name TEXT NOT NULL
+);
+
+selectAll:
+SELECT * FROM doc_folder;
+
+selectById:
+SELECT * FROM doc_folder WHERE id = ?;
+
+selectPending:
+SELECT * FROM doc_folder WHERE syncState = 'PENDING';
+
+upsert:
+INSERT OR REPLACE INTO doc_folder VALUES ?;
+
+markSynced:
+UPDATE doc_folder SET syncState = 'SYNCED' WHERE id = ? AND updatedAt = ?;
+
+markRejected:
+UPDATE doc_folder SET syncState = 'REJECTED' WHERE id = ? AND updatedAt = ?;
+
+selectChangedSince:
+SELECT * FROM doc_folder WHERE serverSeq > ? ORDER BY serverSeq ASC;

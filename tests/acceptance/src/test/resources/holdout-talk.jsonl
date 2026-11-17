@@ -1,0 +1,21 @@
+{"id":"ht02","text":"I had no idea the exam was so soon, what should I do?","expect":"talk","args":{},"via":"direct"}
+{"id":"ht03","text":"I had trouble focusing in class today, any tips?","expect":"talk","args":{},"via":"direct"}
+{"id":"ht04","text":"I need to stop procrastinating, how do I start?","expect":"talk","args":{},"via":"direct"}
+{"id":"ht05","text":"I should probably sleep more","expect":"talk","args":{},"via":"direct"}
+{"id":"ht06","text":"I want to feel less stressed about finals","expect":"talk","args":{},"via":"direct"}
+{"id":"ht07","text":"is it better to study early in the day or late at night?","expect":"talk","args":{},"via":"direct"}
+{"id":"ht08","text":"I need to vent about my roommate","expect":"talk","args":{},"via":"direct"}
+{"id":"ht09","text":"what do you think about cold showers?","expect":"talk","args":{},"via":"direct"}
+{"id":"ht10","text":"I'm so exhausted this week, what helps?","expect":"talk","args":{},"via":"direct"}
+{"id":"ht11","text":"is it normal to feel anxious before exams?","expect":"talk","args":{},"via":"direct"}
+{"id":"ht12","text":"I want to get a lot better at handling my schedule","expect":"talk","args":{},"via":"direct"}
+{"id":"ht13","text":"tell me something interesting about octopuses","expect":"talk","args":{},"via":"direct"}
+{"id":"ht14","text":"how can I stay motivated when studying alone?","expect":"talk","args":{},"via":"direct"}
+{"id":"ht15","text":"I feel like nobody understands my major","expect":"talk","args":{},"via":"direct"}
+{"id":"ht16","text":"I should talk to my professor but I'm nervous","expect":"talk","args":{},"via":"direct"}
+{"id":"ht17","text":"how do people usually unwind after a tiring day?","expect":"talk","args":{},"via":"direct"}
+{"id":"ht18","text":"I think the new schedule is too packed","expect":"talk","args":{},"via":"direct"}
+{"id":"ht19","text":"my back hurts from sitting all day","expect":"talk","args":{},"via":"direct"}
+{"id":"ht20","text":"I had a nice walk and it cleared my head","expect":"talk","args":{},"via":"direct"}
+{"id":"ht21","text":"I had a long day and I am completely wiped out","expect":"talk","args":{},"via":"direct"}
+{"id":"ht22","text":"I had a bad night and I am so tired today","expect":"talk","args":{},"via":"direct"}

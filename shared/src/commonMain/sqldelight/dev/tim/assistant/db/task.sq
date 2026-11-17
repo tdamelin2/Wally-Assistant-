@@ -1,0 +1,36 @@
+CREATE TABLE task (
+    id TEXT NOT NULL PRIMARY KEY,
+    updatedAt INTEGER NOT NULL,
+    deleted INTEGER NOT NULL,
+    serverSeq INTEGER NOT NULL DEFAULT 0,
+    syncState TEXT NOT NULL,
+    title TEXT NOT NULL,
+    dueDate TEXT,
+    done INTEGER NOT NULL,
+    doneAt INTEGER,
+    goalId TEXT
+);
+
+selectAll:
+SELECT * FROM task;
+
+selectById:
+SELECT * FROM task WHERE id = ?;
+
+selectPending:
+SELECT * FROM task WHERE syncState = 'PENDING';
+
+upsert:
+INSERT OR REPLACE INTO task VALUES ?;
+
+markSynced:
+UPDATE task SET syncState = 'SYNCED' WHERE id = ? AND updatedAt = ?;
+
+markRejected:
+UPDATE task SET syncState = 'REJECTED' WHERE id = ? AND updatedAt = ?;
+
+selectChangedSince:
+SELECT * FROM task WHERE serverSeq > ? ORDER BY serverSeq ASC;
+
+selectByGoal:
+SELECT * FROM task WHERE deleted = 0 AND goalId = ?;

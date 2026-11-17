@@ -1,0 +1,34 @@
+CREATE TABLE checkin (
+    id TEXT NOT NULL PRIMARY KEY,
+    updatedAt INTEGER NOT NULL,
+    deleted INTEGER NOT NULL,
+    serverSeq INTEGER NOT NULL DEFAULT 0,
+    syncState TEXT NOT NULL,
+    localDate TEXT NOT NULL,
+    mood INTEGER NOT NULL,
+    energy INTEGER NOT NULL,
+    sleepQuality INTEGER NOT NULL,
+    stress INTEGER NOT NULL,
+    note TEXT
+);
+
+selectAll:
+SELECT * FROM checkin;
+
+selectById:
+SELECT * FROM checkin WHERE id = ?;
+
+selectPending:
+SELECT * FROM checkin WHERE syncState = 'PENDING';
+
+upsert:
+INSERT OR REPLACE INTO checkin VALUES ?;
+
+markSynced:
+UPDATE checkin SET syncState = 'SYNCED' WHERE id = ? AND updatedAt = ?;
+
+markRejected:
+UPDATE checkin SET syncState = 'REJECTED' WHERE id = ? AND updatedAt = ?;
+
+selectChangedSince:
+SELECT * FROM checkin WHERE serverSeq > ? ORDER BY serverSeq ASC;

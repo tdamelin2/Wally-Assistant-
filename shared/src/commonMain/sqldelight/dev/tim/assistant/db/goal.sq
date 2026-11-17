@@ -1,0 +1,32 @@
+CREATE TABLE goal (
+    id TEXT NOT NULL PRIMARY KEY,
+    updatedAt INTEGER NOT NULL,
+    deleted INTEGER NOT NULL,
+    serverSeq INTEGER NOT NULL DEFAULT 0,
+    syncState TEXT NOT NULL,
+    title TEXT NOT NULL,
+    why TEXT,
+    deadline TEXT,
+    status TEXT NOT NULL
+);
+
+selectAll:
+SELECT * FROM goal;
+
+selectById:
+SELECT * FROM goal WHERE id = ?;
+
+selectPending:
+SELECT * FROM goal WHERE syncState = 'PENDING';
+
+upsert:
+INSERT OR REPLACE INTO goal VALUES ?;
+
+markSynced:
+UPDATE goal SET syncState = 'SYNCED' WHERE id = ? AND updatedAt = ?;
+
+markRejected:
+UPDATE goal SET syncState = 'REJECTED' WHERE id = ? AND updatedAt = ?;
+
+selectChangedSince:
+SELECT * FROM goal WHERE serverSeq > ? ORDER BY serverSeq ASC;

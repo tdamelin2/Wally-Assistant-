@@ -1,0 +1,36 @@
+CREATE TABLE card (
+    id TEXT NOT NULL PRIMARY KEY,
+    updatedAt INTEGER NOT NULL,
+    deleted INTEGER NOT NULL,
+    serverSeq INTEGER NOT NULL DEFAULT 0,
+    syncState TEXT NOT NULL,
+    fileId TEXT NOT NULL,
+    front TEXT NOT NULL,
+    back TEXT NOT NULL,
+    lastResult TEXT,
+    lastReviewedAt INTEGER
+);
+
+selectAll:
+SELECT * FROM card;
+
+selectById:
+SELECT * FROM card WHERE id = ?;
+
+selectPending:
+SELECT * FROM card WHERE syncState = 'PENDING';
+
+upsert:
+INSERT OR REPLACE INTO card VALUES ?;
+
+markSynced:
+UPDATE card SET syncState = 'SYNCED' WHERE id = ? AND updatedAt = ?;
+
+markRejected:
+UPDATE card SET syncState = 'REJECTED' WHERE id = ? AND updatedAt = ?;
+
+selectChangedSince:
+SELECT * FROM card WHERE serverSeq > ? ORDER BY serverSeq ASC;
+
+selectByFile:
+SELECT * FROM card WHERE deleted = 0 AND fileId = ?;

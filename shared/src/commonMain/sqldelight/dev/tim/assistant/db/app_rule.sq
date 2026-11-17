@@ -1,0 +1,34 @@
+CREATE TABLE app_rule (
+    id TEXT NOT NULL PRIMARY KEY,
+    updatedAt INTEGER NOT NULL,
+    deleted INTEGER NOT NULL,
+    serverSeq INTEGER NOT NULL DEFAULT 0,
+    syncState TEXT NOT NULL,
+    matchType TEXT NOT NULL,
+    pattern TEXT NOT NULL,
+    label TEXT NOT NULL
+);
+
+selectAll:
+SELECT * FROM app_rule;
+
+selectById:
+SELECT * FROM app_rule WHERE id = ?;
+
+selectPending:
+SELECT * FROM app_rule WHERE syncState = 'PENDING';
+
+upsert:
+INSERT OR REPLACE INTO app_rule VALUES ?;
+
+markSynced:
+UPDATE app_rule SET syncState = 'SYNCED' WHERE id = ? AND updatedAt = ?;
+
+markRejected:
+UPDATE app_rule SET syncState = 'REJECTED' WHERE id = ? AND updatedAt = ?;
+
+selectChangedSince:
+SELECT * FROM app_rule WHERE serverSeq > ? ORDER BY serverSeq ASC;
+
+selectAllActive:
+SELECT * FROM app_rule WHERE deleted = 0 ORDER BY id ASC;

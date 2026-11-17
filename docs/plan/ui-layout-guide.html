@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Wally layout guide</title>
+<!-- Layout guide for PLAN Phase 5 / dev Phase 6 (D60). It shows WHERE things go, not the final look:
+     colours, font and card style come in PLAN Phase 7 (Wally look). Sample data is made up.
+     Open in a browser; click the menu icon in mockup 1 to see the collapsed sidebar. -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.19.0/dist/tabler-icons.min.css">
+<style>
+:root{--surface-1:#f3f2ee;--surface-2:#ffffff;--border:rgba(0,0,0,.12);--border-strong:rgba(0,0,0,.25);
+--text-primary:#1f1e1b;--text-secondary:#6b6a65;--text-success:#2f7a1f;--text-accent:#1d5fa8;--radius:8px}
+body{margin:0;padding:16px;font-family:system-ui,sans-serif;background:var(--surface-2);color:var(--text-primary)}
+.f{border:.5px solid var(--border-strong);border-radius:12px;background:var(--surface-2);overflow:hidden;font-size:13px}
+.ni{display:flex;align-items:center;gap:10px;padding:7px 10px;border-radius:var(--radius);color:var(--text-secondary);white-space:nowrap}
+.ni.on{background:var(--surface-1);color:var(--text-primary);font-weight:500}
+.ni i{font-size:18px}
+.row{display:flex;align-items:center;gap:10px;padding:8px 0;border-bottom:.5px solid var(--border)}
+.sec{font-size:12px;color:var(--text-secondary);margin:12px 0 2px}
+.mut{color:var(--text-secondary);font-size:12px}
+.fab{width:40px;height:40px;border-radius:50%;background:var(--text-primary);color:var(--surface-2);display:flex;align-items:center;justify-content:center;font-size:20px}
+.lbl{font-size:12px;color:var(--text-secondary);margin:1.25rem 0 6px}
+.collapsed .t{display:none}
+.collapsed #side{width:52px}
+</style>
+</head>
+<body>
+
+<div class="lbl">1 · Laptop (wide window): Today, sidebar open (click the menu icon to collapse to icons)</div>
+<div class="f" id="lap" style="display:flex;height:330px">
+  <div id="side" style="width:170px;border-right:.5px solid var(--border);padding:8px;display:flex;flex-direction:column;gap:2px;transition:width .2s">
+    <div class="ni" id="tog" style="cursor:pointer"><i class="ti ti-menu-2"></i><span class="t">Wally</span></div>
+    <div class="ni" style="color:var(--text-primary);border:.5px solid var(--border-strong);margin:4px 0 8px"><i class="ti ti-plus"></i><span class="t">New entry</span></div>
+    <div class="ni on"><i class="ti ti-sun"></i><span class="t">Today</span></div>
+    <div class="ni"><i class="ti ti-list"></i><span class="t">Log</span></div>
+    <div class="ni"><i class="ti ti-chart-line"></i><span class="t">Charts</span></div>
+    <div class="ni"><i class="ti ti-heartbeat"></i><span class="t">Health</span></div>
+    <div class="ni"><i class="ti ti-message"></i><span class="t">Chat</span></div>
+    <div style="flex:1"></div>
+    <div class="ni"><i class="ti ti-cloud-check" style="color:var(--text-success)"></i><span class="t">Synced 09:41</span></div>
+    <div class="ni"><i class="ti ti-settings"></i><span class="t">Settings</span></div>
+  </div>
+  <div style="flex:1;overflow:hidden;display:flex;justify-content:center;padding:14px 16px">
+    <div style="width:100%;max-width:360px">
+      <div style="font-size:18px;font-weight:500">Today</div>
+      <div class="sec">Next 7 days</div>
+      <div class="row"><span class="mut" style="width:42px">10:00</span><span style="flex:1">Lecture — algorithms</span><i class="ti ti-dots-vertical mut"></i></div>
+      <div class="row"><span class="mut" style="width:42px">18:30</span><span style="flex:1">Gym</span><i class="ti ti-dots-vertical mut"></i></div>
+      <div class="sec">Unread mail</div>
+      <div class="row"><span style="flex:1">University · Exam schedule</span><i class="ti ti-dots-vertical mut"></i></div>
+      <div class="sec">Open tasks</div>
+      <div class="row"><i class="ti ti-square mut"></i><span style="flex:1">Finish report</span><span class="mut">Due 12 Nov</span></div>
+    </div>
+  </div>
+</div>
+
+<div class="lbl">2 · Laptop: a form opens as a dialog over the page</div>
+<div class="f" style="height:220px;display:flex;align-items:center;justify-content:center;background:var(--surface-1)">
+  <div style="width:300px;background:var(--surface-2);border:.5px solid var(--border-strong);border-radius:12px;padding:14px 16px">
+    <div style="font-weight:500;margin-bottom:10px">New spending</div>
+    <div class="mut">Amount</div><div style="border:.5px solid var(--border-strong);border-radius:var(--radius);padding:6px 8px;margin:4px 0 8px">₪ 42.50</div>
+    <div class="mut">Note</div><div style="border:.5px solid var(--border-strong);border-radius:var(--radius);padding:6px 8px;margin:4px 0 12px">Groceries</div>
+    <div style="display:flex;justify-content:flex-end;gap:8px"><span style="padding:5px 12px">Cancel</span><span style="padding:5px 12px;border-radius:var(--radius);background:var(--text-primary);color:var(--surface-2)">Save</span></div>
+  </div>
+</div>
+
+<div style="display:flex;gap:20px;flex-wrap:wrap">
+<div>
+<div class="lbl">3 · Phone (narrow window): Today</div>
+<div class="f" style="width:220px;height:400px;display:flex;flex-direction:column;position:relative">
+  <div style="display:flex;align-items:center;padding:10px 12px;border-bottom:.5px solid var(--border)"><span style="font-weight:500;flex:1;font-size:15px">Today</span><i class="ti ti-cloud-check" style="font-size:18px;color:var(--text-success);margin-right:12px"></i><i class="ti ti-settings" style="font-size:18px"></i></div>
+  <div style="flex:1;padding:0 12px">
+    <div class="sec">Next 7 days</div>
+    <div class="row"><span class="mut">10:00</span><span style="flex:1">Lecture</span><i class="ti ti-dots-vertical mut"></i></div>
+    <div class="row"><span class="mut">18:30</span><span style="flex:1">Gym</span><i class="ti ti-dots-vertical mut"></i></div>
+    <div class="sec">Open tasks</div>
+    <div class="row"><i class="ti ti-square mut"></i><span style="flex:1">Finish report</span></div>
+  </div>
+  <div class="fab" style="position:absolute;right:12px;bottom:62px"><i class="ti ti-plus"></i></div>
+  <div style="display:flex;border-top:.5px solid var(--border);padding:6px 0">
+    <div style="flex:1;text-align:center;font-size:11px;font-weight:500"><i class="ti ti-sun" style="font-size:18px;display:block"></i>Today</div>
+    <div style="flex:1;text-align:center;font-size:11px;color:var(--text-secondary)"><i class="ti ti-list" style="font-size:18px;display:block"></i>Log</div>
+    <div style="flex:1;text-align:center;font-size:11px;color:var(--text-secondary)"><i class="ti ti-chart-line" style="font-size:18px;display:block"></i>Charts</div>
+    <div style="flex:1;text-align:center;font-size:11px;color:var(--text-secondary)"><i class="ti ti-heartbeat" style="font-size:18px;display:block"></i>Health</div>
+    <div style="flex:1;text-align:center;font-size:11px;color:var(--text-secondary)"><i class="ti ti-message" style="font-size:18px;display:block"></i>Chat</div>
+  </div>
+</div>
+</div>
+
+<div>
+<div class="lbl">4 · Phone: + menu open</div>
+<div class="f" style="width:220px;height:400px;display:flex;flex-direction:column;justify-content:flex-end;align-items:flex-end;padding:12px;box-sizing:border-box;background:var(--surface-1)">
+  <div style="display:flex;flex-direction:column;gap:6px;align-items:flex-end;margin-bottom:10px">
+    <div class="ni" style="background:var(--surface-2);border:.5px solid var(--border)"><i class="ti ti-mood-smile"></i>Check-in</div>
+    <div class="ni" style="background:var(--surface-2);border:.5px solid var(--border)"><i class="ti ti-coin"></i>Spending</div>
+    <div class="ni" style="background:var(--surface-2);border:.5px solid var(--border)"><i class="ti ti-notebook"></i>Journal</div>
+    <div class="ni" style="background:var(--surface-2);border:.5px solid var(--border)"><i class="ti ti-checkbox"></i>Task</div>
+    <div class="ni" style="background:var(--surface-2);border:.5px solid var(--border)"><i class="ti ti-salad"></i>Meal</div>
+  </div>
+  <div class="fab" style="margin-bottom:50px"><i class="ti ti-x"></i></div>
+</div>
+</div>
+
+<div>
+<div class="lbl">5 · Phone: form full screen</div>
+<div class="f" style="width:220px;height:400px">
+  <div style="display:flex;align-items:center;gap:10px;padding:10px 12px;border-bottom:.5px solid var(--border)"><i class="ti ti-arrow-left" style="font-size:18px"></i><span style="flex:1;font-weight:500">New spending</span><span style="font-weight:500;color:var(--text-accent)">Save</span></div>
+  <div style="padding:12px">
+    <div class="mut">Amount</div><div style="border:.5px solid var(--border-strong);border-radius:var(--radius);padding:6px 8px;margin:4px 0 10px">₪ 42.50</div>
+    <div class="mut">Note</div><div style="border:.5px solid var(--border-strong);border-radius:var(--radius);padding:6px 8px">Groceries</div>
+  </div>
+</div>
+</div>
+</div>
+
+<script>
+document.getElementById('tog').onclick=function(){document.getElementById('lap').classList.toggle('collapsed')};
+</script>
+</body>
+</html>

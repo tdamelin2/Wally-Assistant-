@@ -1,0 +1,162 @@
+CREATE TABLE chat (
+    id TEXT NOT NULL PRIMARY KEY,
+    title TEXT NOT NULL,
+    created_at INTEGER NOT NULL,
+    last_used_at INTEGER NOT NULL,
+    pinned INTEGER NOT NULL DEFAULT 0,
+    archived_at INTEGER
+);
+
+CREATE TABLE chat_message (
+    id TEXT NOT NULL PRIMARY KEY,
+    chat_id TEXT NOT NULL,
+    role TEXT NOT NULL,
+    text TEXT NOT NULL,
+    card_json TEXT,
+    request_state TEXT,
+    created_at INTEGER NOT NULL
+);
+
+CREATE INDEX chat_message_chat ON chat_message(chat_id, created_at);
+
+CREATE TABLE memory_note (
+    id TEXT NOT NULL PRIMARY KEY,
+    source_chat_id TEXT NOT NULL,
+    source_chat_title TEXT NOT NULL,
+    summary TEXT,
+    state TEXT NOT NULL,
+    attempts INTEGER NOT NULL DEFAULT 0,
+    created_at INTEGER NOT NULL
+);
+
+CREATE TABLE outbox_notification (
+    id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+    kind TEXT NOT NULL,
+    title TEXT NOT NULL,
+    body TEXT NOT NULL,
+    chat_id TEXT,
+    fire_at INTEGER NOT NULL,
+    created_at INTEGER NOT NULL,
+    delivered_at INTEGER,
+    dedupe_key TEXT NOT NULL UNIQUE
+);
+-- Chats (private to the server, never synced). Pinned chats (the weekly report) never count toward the 10-chat limit.
+insertChat:
+INSERT OR IGNORE INTO chat(id, title, created_at, last_used_at, pinned, archived_at) VALUES (?, ?, ?, ?, ?, NULL);
+
+selectChatById:
+SELECT * FROM chat WHERE id = ?;
+
+selectActiveChats:
+SELECT * FROM chat WHERE archived_at IS NULL ORDER BY pinned DESC, last_used_at DESC, created_at DESC, id ASC;
+
+countActiveUnpinnedChats:
+SELECT COUNT(*) FROM chat WHERE archived_at IS NULL AND pinned = 0;
+
+selectOldestActiveUnpinnedChat:
+SELECT * FROM chat WHERE archived_at IS NULL AND pinned = 0 ORDER BY last_used_at ASC, created_at ASC, id ASC LIMIT 1;
+
+selectPinnedChat:
+SELECT * FROM chat WHERE pinned = 1 AND archived_at IS NULL ORDER BY created_at ASC, id ASC LIMIT 1;
+
+touchChat:
+UPDATE chat SET last_used_at = :lastUsedAt WHERE id = :id;
+
+renameChat:
+UPDATE chat SET title = :title WHERE id = :id;
+
+archiveChat:
+UPDATE chat SET archived_at = :archivedAt WHERE id = :id AND archived_at IS NULL;
+
+selectArchivedChatsOlderThan:
+SELECT * FROM chat WHERE archived_at IS NOT NULL AND archived_at < :cutoff ORDER BY archived_at ASC, id ASC;
+
+deleteChat:
+DELETE FROM chat WHERE id = ?;
+
+-- Messages
+insertMessage:
+INSERT OR IGNORE INTO chat_message(id, chat_id, role, text, card_json, request_state, created_at) VALUES (?, ?, ?, ?, ?, ?, ?);
+
+selectMessageById:
+SELECT * FROM chat_message WHERE id = ?;
+
+selectMessagesByChat:
+SELECT * FROM chat_message WHERE chat_id = ? ORDER BY created_at ASC, rowid ASC;
+
+selectLastMessagesByChat:
+SELECT * FROM chat_message WHERE chat_id = :chatId ORDER BY created_at DESC, rowid DESC LIMIT :limit;
+
+selectLastMessageText:
+SELECT text FROM chat_message WHERE chat_id = ? ORDER BY created_at DESC, rowid DESC LIMIT 1;
+
+updateMessageCard:
+UPDATE chat_message SET card_json = :cardJson WHERE id = :id;
+
+updateMessageRequestState:
+UPDATE chat_message SET request_state = :requestState WHERE id = :id;
+
+selectPhonePendingReplies:
+SELECT * FROM chat_message WHERE request_state = 'PHONE_PENDING';
+
+deleteMessageById:
+DELETE FROM chat_message WHERE id = ?;
+
+deleteMessagesByChat:
+DELETE FROM chat_message WHERE chat_id = ?;
+
+-- Memory notes (one per closed chat; the summary is written later and retried)
+insertNote:
+INSERT OR IGNORE INTO memory_note(id, source_chat_id, source_chat_title, summary, state, attempts, created_at) VALUES (?, ?, ?, NULL, 'PENDING', 0, ?);
+
+selectNoteById:
+SELECT * FROM memory_note WHERE id = ?;
+
+selectNoteBySourceChat:
+SELECT * FROM memory_note WHERE source_chat_id = ? ORDER BY created_at DESC, id ASC LIMIT 1;
+
+selectAllNotes:
+SELECT * FROM memory_note ORDER BY created_at DESC, id ASC;
+
+selectNewestDoneNotes:
+SELECT * FROM memory_note WHERE state = 'DONE' ORDER BY created_at DESC, id ASC LIMIT :limit;
+
+selectPendingNotes:
+SELECT * FROM memory_note WHERE state = 'PENDING' ORDER BY created_at ASC, id ASC;
+
+completeNote:
+UPDATE memory_note SET summary = :summary, state = 'DONE' WHERE id = :id;
+
+retryNote:
+UPDATE memory_note SET attempts = :attempts WHERE id = :id;
+
+failNote:
+UPDATE memory_note SET state = 'FAILED', attempts = :attempts WHERE id = :id;
+
+deleteNote:
+DELETE FROM memory_note WHERE id = ?;
+
+-- Notification outbox (the phone replays by id, delivered_at only means "offered at")
+insertNotification:
+INSERT OR IGNORE INTO outbox_notification(kind, title, body, chat_id, fire_at, created_at, delivered_at, dedupe_key) VALUES (?, ?, ?, ?, ?, ?, NULL, ?);
+
+selectNotificationByDedupe:
+SELECT * FROM outbox_notification WHERE dedupe_key = ?;
+
+selectNotificationById:
+SELECT * FROM outbox_notification WHERE id = ?;
+
+selectNotificationsSince:
+SELECT * FROM outbox_notification WHERE id > :since ORDER BY id ASC LIMIT :limit;
+
+markNotificationDelivered:
+UPDATE outbox_notification SET delivered_at = :deliveredAt WHERE id = :id AND delivered_at IS NULL;
+
+countNotificationsFiringBetween:
+SELECT COUNT(*) FROM outbox_notification WHERE fire_at >= :from AND fire_at < :to;
+
+deleteNotificationsOlderThan:
+DELETE FROM outbox_notification WHERE created_at < :cutoff;
+
+lastInsertedRowId:
+SELECT last_insert_rowid();

@@ -1,0 +1,10 @@
+[Unit]
+Description=Nightly encrypted backup of the assistant database
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+User=assistant
+UMask=0077
+ExecStart=/opt/assistant/assistant-backup.sh

@@ -1,0 +1,18 @@
+{"id":"g01","text":"don't log my lunch","expect":"pass_up","args":{}}
+{"id":"g02","text":"I never spent 50 on that jacket","expect":"pass_up","args":{}}
+{"id":"g03","text":"please don't add any task for tomorrow","expect":"pass_up","args":{}}
+{"id":"g04","text":"add task buy milk and log lunch pasta","expect":"pass_up","args":{}}
+{"id":"g05","text":"I spent 20 on coffee and 40 on a taxi","expect":"pass_up","args":{}}
+{"id":"g06","text":"could you log lunch as a sandwich","expect":"pass_up","args":{}}
+{"id":"g07","text":"can you save that I spent 25 on parking?","expect":"pass_up","args":{}}
+{"id":"g08","text":"the sandwich set me back 22","expect":"pass_up","args":{}}
+{"id":"g09","text":"feeling like a 3 on mood and a 4 on energy today","expect":"pass_up","args":{}}
+{"id":"g10","text":"my brother paid 70 for the tickets","expect":"pass_up","args":{}}
+{"id":"g11","text":"I spent 3 hours on the report","expect":"pass_up","args":{}}
+{"id":"g12","text":"I spent 40 euros on the book","expect":"pass_up","args":{}}
+{"id":"g13","text":"got a 60 shekel refund for the headphones","expect":"pass_up","args":{}}
+{"id":"g14","text":"I spent 50 on a haircut yesterday","expect":"pass_up","args":{}}
+{"id":"g15","text":"I'll spend 200 on a gift tomorrow","expect":"pass_up","args":{}}
+{"id":"g16","text":"add dinner with my cousin at 7pm","expect":"pass_up","args":{}}
+{"id":"g17","text":"make a note that the lab key is with the guard","expect":"pass_up","args":{}}
+{"id":"g18","text":"I spent 400 on food this week","expect":"pass_up","args":{}}

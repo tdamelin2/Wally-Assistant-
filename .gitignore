@@ -1,0 +1,61 @@
+# Secrets and local configuration
+.env
+.env.*
+!.env.example
+local.properties
+config.json
+*-token.json
+*.pem
+*.key
+*.jks
+*.keystore
+rclone.conf
+
+# Local databases, exports and personal data
+*.db
+*.db-shm
+*.db-wal
+*.sqlite
+*.sqlite3
+*.csv
+logs/*
+!logs/.gitkeep
+exports/
+
+# Kotlin / Gradle / Android build output
+build/
+.gradle/
+.kotlin/
+captures/
+*.apk
+*.aab
+*.msi
+
+# On-device model files
+*.litertlm
+*.gguf
+
+# IDE and OS files
+.idea/
+*.iml
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Personal Claude Code settings and agent memory
+.claude/settings.local.json
+.claude/agent-memory/
+.claude/agent-memory-local/
+
+# Telegram connector state (read position, questions asked)
+managers/*/telegram/
+
+# Generated code map
+graphify-out/
+
+# Other common tool folders
+node_modules/
+__pycache__/
+*.pyc
+.venv/
+venv/

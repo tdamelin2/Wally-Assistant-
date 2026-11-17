@@ -1,0 +1,39 @@
+CREATE TABLE usage_session (
+    id TEXT NOT NULL PRIMARY KEY,
+    updatedAt INTEGER NOT NULL,
+    deleted INTEGER NOT NULL,
+    serverSeq INTEGER NOT NULL DEFAULT 0,
+    syncState TEXT NOT NULL,
+    device TEXT NOT NULL,
+    app TEXT NOT NULL,
+    title TEXT,
+    startAt INTEGER NOT NULL,
+    endAt INTEGER NOT NULL,
+    localDate TEXT NOT NULL
+);
+
+CREATE INDEX usage_session_localDate ON usage_session(localDate);
+
+selectAll:
+SELECT * FROM usage_session;
+
+selectById:
+SELECT * FROM usage_session WHERE id = ?;
+
+selectPending:
+SELECT * FROM usage_session WHERE syncState = 'PENDING';
+
+upsert:
+INSERT OR REPLACE INTO usage_session VALUES ?;
+
+markSynced:
+UPDATE usage_session SET syncState = 'SYNCED' WHERE id = ? AND updatedAt = ?;
+
+markRejected:
+UPDATE usage_session SET syncState = 'REJECTED' WHERE id = ? AND updatedAt = ?;
+
+selectChangedSince:
+SELECT * FROM usage_session WHERE serverSeq > ? ORDER BY serverSeq ASC;
+
+selectByDateRange:
+SELECT * FROM usage_session WHERE deleted = 0 AND localDate >= ? AND localDate <= ? ORDER BY startAt ASC, id ASC;

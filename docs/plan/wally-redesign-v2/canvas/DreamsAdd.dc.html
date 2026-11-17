@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Write a dream</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#1F6F4A}a:hover{color:#0F3D27}
+button,textarea,input{font-family:inherit}
+.n{height:44px;border:1px solid #D5DBD3;border-radius:14px;background:#FFFFFF;color:#16201A;font-size:16px;font-weight:500}
+.on{border:0;background:#1F6F4A;color:#FFFFFF}
+</style>
+</helmet>
+<div style="width: 390px; height: 844px; box-sizing: border-box; background: #FFFFFF; color: #16201A; font-family: Roboto, system-ui, sans-serif; display: flex; flex-direction: column">
+
+  <header style="padding: 20px 12px 4px 4px; display: flex; align-items: center; gap: 4px">
+    <button aria-label="Close" style="width: 48px; height: 48px; border: 0; border-radius: 24px; background: transparent; color: #16201A; display: flex; align-items: center; justify-content: center"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"></path></svg></button>
+    <h1 style="margin: 0; flex: 1; font-size: 18px; font-weight: 500">New dream</h1>
+    <button style="height: 36px; padding: 0 12px; border: 1px solid #D5DBD3; border-radius: 18px; background: #FFFFFF; color: #16201A; font-size: 13px; display: flex; align-items: center; gap: 6px"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"></rect><path d="M3 10h18M8 3v4M16 3v4"></path></svg>Last night</button>
+  </header>
+
+  <label for="d-text" style="position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0)">What did you dream?</label>
+  <textarea id="d-text" placeholder="What did you dream?" style="flex: 1; margin: 8px 20px 0 20px; border: 0; outline: none; resize: none; font-size: 17px; line-height: 1.55; color: #16201A; background: transparent">[Typing the dream here. Big writing area, same as Journal.]</textarea>
+
+  <div style="padding: 14px 20px 20px 20px; border-top: 1px solid #E4E7E1; display: flex; flex-direction: column; gap: 14px">
+    <div style="display: flex; flex-direction: column; gap: 8px">
+      <div style="display: flex; justify-content: space-between; font-size: 14px; font-weight: 500">Mood on waking<span style="font-size: 12px; font-weight: 400; color: #55605A">1 bad · 5 great</span></div>
+      <div style="display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 8px"><button class="n">1</button><button class="n">2</button><button class="n on" aria-pressed="true">3</button><button class="n">4</button><button class="n">5</button></div>
+    </div>
+
+    <div style="display: flex; gap: 12px; align-items: center">
+      <button role="checkbox" aria-checked="false" style="height: 44px; border: 0; background: transparent; color: #16201A; font-size: 15px; display: flex; align-items: center; gap: 10px; padding: 0; flex: none"><span style="width: 24px; height: 24px; border-radius: 12px; border: 2px solid #55605A; box-sizing: border-box"></span>Lucid</button>
+      <label for="d-tags" style="position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0)">Tags</label>
+      <input id="d-tags" placeholder="Tags, comma separated" style="flex: 1; min-width: 0; height: 44px; border: 1px solid #D5DBD3; border-radius: 14px; padding: 0 12px; font-size: 14px; color: #16201A; background: #FFFFFF">
+    </div>
+
+    <div style="display: flex; align-items: center; gap: 10px">
+      <span style="flex: 1; font-size: 12px; color: #55605A">Draft kept if you leave</span>
+      <button style="height: 52px; padding: 0 28px; border: 0; border-radius: 26px; background: #1F6F4A; color: #FFFFFF; font-size: 16px; font-weight: 500">Save</button>
+    </div>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+renderVals() {
+return {};
+}
+}
+</script>
+</body>
+</html>

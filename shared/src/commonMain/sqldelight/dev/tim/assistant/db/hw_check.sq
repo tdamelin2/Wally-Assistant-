@@ -1,0 +1,31 @@
+CREATE TABLE hw_check (
+    id TEXT NOT NULL PRIMARY KEY,
+    updatedAt INTEGER NOT NULL,
+    deleted INTEGER NOT NULL,
+    serverSeq INTEGER NOT NULL DEFAULT 0,
+    syncState TEXT NOT NULL,
+    takenAt INTEGER NOT NULL,
+    resultJson TEXT NOT NULL,
+    summary TEXT NOT NULL
+);
+
+selectAll:
+SELECT * FROM hw_check;
+
+selectById:
+SELECT * FROM hw_check WHERE id = ?;
+
+selectPending:
+SELECT * FROM hw_check WHERE syncState = 'PENDING';
+
+upsert:
+INSERT OR REPLACE INTO hw_check VALUES ?;
+
+markSynced:
+UPDATE hw_check SET syncState = 'SYNCED' WHERE id = ? AND updatedAt = ?;
+
+markRejected:
+UPDATE hw_check SET syncState = 'REJECTED' WHERE id = ? AND updatedAt = ?;
+
+selectChangedSince:
+SELECT * FROM hw_check WHERE serverSeq > ? ORDER BY serverSeq ASC;

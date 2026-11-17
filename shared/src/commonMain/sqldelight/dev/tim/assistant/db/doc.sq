@@ -1,0 +1,35 @@
+CREATE TABLE doc (
+    id TEXT NOT NULL PRIMARY KEY,
+    updatedAt INTEGER NOT NULL,
+    deleted INTEGER NOT NULL,
+    serverSeq INTEGER NOT NULL DEFAULT 0,
+    syncState TEXT NOT NULL,
+    folderId TEXT,
+    title TEXT NOT NULL,
+    body TEXT NOT NULL,
+    source TEXT NOT NULL
+);
+
+selectAll:
+SELECT * FROM doc;
+
+selectById:
+SELECT * FROM doc WHERE id = ?;
+
+selectPending:
+SELECT * FROM doc WHERE syncState = 'PENDING';
+
+upsert:
+INSERT OR REPLACE INTO doc VALUES ?;
+
+markSynced:
+UPDATE doc SET syncState = 'SYNCED' WHERE id = ? AND updatedAt = ?;
+
+markRejected:
+UPDATE doc SET syncState = 'REJECTED' WHERE id = ? AND updatedAt = ?;
+
+selectChangedSince:
+SELECT * FROM doc WHERE serverSeq > ? ORDER BY serverSeq ASC;
+
+search:
+SELECT * FROM doc WHERE deleted = 0 AND (title LIKE '%' || :q || '%' ESCAPE '\' OR body LIKE '%' || :q || '%' ESCAPE '\') ORDER BY updatedAt DESC;

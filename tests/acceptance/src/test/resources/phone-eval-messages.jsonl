@@ -1,0 +1,20 @@
+{"id":"p01","text":"got a coffee and a croissant for 24 at the cafe","expect":{"kind":"action","action":"add_spending","args":{"amount":24}}}
+{"id":"p02","text":"remind me to renew my student card by thursday next week","expect":{"kind":"action","action":"create_task","args":{"title":"student card","dueDate":"2026-11-19"}}}
+{"id":"p03","text":"had pasta with pesto for dinner around 8","expect":{"kind":"action","action":"add_meal","args":{"text":"pasta"}}}
+{"id":"p04","text":"paid 150 for the gym membership","expect":{"kind":"action","action":"add_spending","args":{"amount":150}}}
+{"id":"p05","text":"need to email the TA about lab 3 tomorrow","expect":{"kind":"action","action":"create_task","args":{"title":"lab","dueDate":"2026-11-13"}}}
+{"id":"p06","text":"snack: yogurt and granola","expect":{"kind":"action","action":"add_meal","args":{"text":"yogurt"}}}
+{"id":"p07","text":"move the statistics exam to the 4th of dec, same time","expect":{"kind":"action","action":"update_exam","target":"statistics","args":{"localDate":"2026-12-04"}}}
+{"id":"p08","text":"actually the coffee was 20 not 18","expect":{"kind":"action","action":"update_spending","args":{"amount":20}}}
+{"id":"p09","text":"the dentist call is done","expect":{"kind":"action","action":"update_task","target":"dentist","args":{"done":"true"}}}
+{"id":"p10","text":"push the lab report to sunday","expect":{"kind":"action","action":"update_task","target":"lab report","args":{"dueDate":"2026-11-15"}}}
+{"id":"p11","text":"chem lab exam is at 14:00 not 13:00","expect":{"kind":"action","action":"update_exam","target":"chem","args":{"time":"14:00"}}}
+{"id":"p12","text":"how much did i spend today","expect":{"kind":"answer","dataValue":"80"}}
+{"id":"p13","text":"total spent this week?","expect":{"kind":"answer","dataValue":"306"}}
+{"id":"p14","text":"what did i eat this morning","expect":{"kind":"answer","dataValue":"shakshuka"}}
+{"id":"p15","text":"whats on tmrw","expect":{"kind":"answer","dataValue":"Dentist"}}
+{"id":"p16","text":"what time is the organic chem exam","expect":{"kind":"answer","dataValue":"13:00"}}
+{"id":"p17","text":"which task is due on the 16th","expect":{"kind":"answer","dataValue":"internet"}}
+{"id":"p18","text":"hey you there","expect":{"kind":"answer"}}
+{"id":"p19","text":"ok cool thx that helps","expect":{"kind":"answer"}}
+{"id":"p20","text":"ugh what a long week","expect":{"kind":"answer"}}

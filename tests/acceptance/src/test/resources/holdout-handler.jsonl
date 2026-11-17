@@ -1,0 +1,80 @@
+{"id":"hd01","text":"what did yesterday cost me in total","expect":"ask_spending","args":{"answerContains":["40"]},"via":"direct"}
+{"id":"hd02","text":"what's my food spending today","expect":"ask_spending","args":{"answerContains":["35"]},"via":"direct"}
+{"id":"hd03","text":"how much have I spent on transport today","expect":"ask_spending","args":{"answerContains":["28"]},"via":"direct"}
+{"id":"hd04","text":"what was my total spending this week","expect":"ask_spending","args":{"answerContains":["103"]},"via":"direct"}
+{"id":"hd05","text":"what did I spend last month","expect":"ask_spending","args":{"answerContains":["No spending logged"]},"via":"direct"}
+{"id":"hd06","text":"what did I spend on food yesterday","expect":"ask_spending","args":{"answerContains":["40"]},"via":"direct"}
+{"id":"hd07","text":"what do I have on my calendar tomorrow","expect":"ask_events","args":{"answerContains":["Lunch with Dana"]},"via":"direct"}
+{"id":"hd08","text":"what's happening on Saturday","expect":"ask_events","args":{"answerContains":["Study group"]},"via":"direct"}
+{"id":"hd09","text":"what's on my schedule today","expect":"ask_events","args":{"answerContains":["Physics lecture","Gym"]},"via":"direct"}
+{"id":"hd10","text":"anything on my calendar next week","expect":"ask_events","args":{"answerContains":["Nothing on your calendar"]},"via":"direct"}
+{"id":"hd11","text":"what tasks are due today","expect":"ask_tasks","args":{"answerContains":["buy groceries"]},"via":"direct"}
+{"id":"hd12","text":"is there anything due Monday","expect":"ask_tasks","args":{"answerContains":["renew library books"]},"via":"direct"}
+{"id":"hd13","text":"tasks due tomorrow","expect":"ask_tasks","args":{"answerContains":["due tomorrow"]},"via":"direct"}
+{"id":"hd14","text":"which tasks are due this week","expect":"ask_tasks","args":{"answerContains":["physics homework"]},"via":"direct"}
+{"id":"hd15","text":"what date is my calculus exam","expect":"ask_exam","args":{"answerContains":["Calculus"]},"via":"direct"}
+{"id":"hd16","text":"when is my linear algebra exam","expect":"ask_exam","args":{"answerContains":["Linear Algebra"]},"via":"direct"}
+{"id":"hd17","text":"when does my next exam take place","expect":"ask_exam","args":{"answerContains":["Calculus"]},"via":"direct"}
+{"id":"hd18","text":"how much did I sleep yesterday","expect":"ask_health","args":{"answerContains":["data"]},"via":"direct"}
+{"id":"hd19","text":"how many steps have I taken today","expect":"ask_health","args":{"answerContains":["data"]},"via":"direct"}
+{"id":"hd20","text":"what's my resting heart rate this week","expect":"ask_health","args":{"answerContains":["data"]},"via":"direct"}
+{"id":"hd21","text":"what did I eat today","expect":"ask_meals","args":{"answerContains":["oats","apple"]},"via":"direct"}
+{"id":"hd22","text":"what's my calorie total for today","expect":"ask_meals","args":{"answerContains":["of 2 meals"]},"via":"direct"}
+{"id":"hd23","text":"what mood score did I log yesterday","expect":"ask_checkin","args":{"answerContains":["No check-in"]},"via":"direct"}
+{"id":"hd24","text":"show my check-in this week","expect":"ask_checkin","args":{"answerContains":["No check-in"]},"via":"direct"}
+{"id":"hd25","text":"yesterday I paid 60 for a taxi","expect":"add_spending","args":{"amount":"60","category":"Transport","date":"2026-11-11"},"via":"direct"}
+{"id":"hd26","text":"spent 22 on a sandwich yesterday","expect":"add_spending","args":{"amount":"22","category":"Food","date":"2026-11-11"},"via":"direct"}
+{"id":"hd27","text":"spent 90 on groceries last Monday","expect":"add_spending","args":{"amount":"90","category":"Food","date":"2026-11-02"},"via":"direct"}
+{"id":"hd28","text":"last Friday I spent 30 on a bus ticket","expect":"add_spending","args":{"amount":"30","category":"Transport","date":"2026-11-06"},"via":"direct"}
+{"id":"hd29","text":"spent 120 on dinner on 5 November","expect":"add_spending","args":{"amount":"120","category":"Food","date":"2026-11-05"},"via":"direct"}
+{"id":"hd30","text":"yesterday I ate noodles for dinner at 8pm","expect":"add_meal","args":{"type":"MEAL","text":"noodles","date":"2026-11-11"},"via":"direct"}
+{"id":"hd31","text":"had a salad for lunch at 1pm yesterday","expect":"add_meal","args":{"type":"MEAL","text":"salad","date":"2026-11-11"},"via":"direct"}
+{"id":"hd32","text":"last Monday I had toast as a snack at 4pm","expect":"add_meal","args":{"type":"SNACK","text":"toast","date":"2026-11-02"},"via":"direct"}
+{"id":"hd33","text":"add a task to water the plants tomorrow","expect":"create_task","args":{"title":"water the plants","dueDate":"{tomorrow}"},"via":"direct"}
+{"id":"hd34","text":"create task: submit lab report","expect":"create_task","args":{"title":"submit lab report"},"via":"direct"}
+{"id":"hd35","text":"spent 48 on lunch","expect":"add_spending","args":{"amount":"48","category":"Food","date":"{today}"},"via":"direct"}
+{"id":"hd36","text":"paid 15 for the bus","expect":"add_spending","args":{"amount":"15","category":"Transport","date":"{today}"},"via":"direct"}
+{"id":"hd37","text":"log breakfast: yogurt and honey","expect":"add_meal","args":{"type":"MEAL","text":"yogurt","date":"{today}"},"via":"direct"}
+{"id":"hd38","text":"I ate a cookie as a snack","expect":"add_meal","args":{"type":"SNACK","text":"cookie","date":"{today}"},"via":"direct"}
+{"id":"hd39","text":"check-in: mood 5, energy 2, sleep 3, stress 1","expect":"add_checkin","args":{"mood":5,"energy":2,"sleepQuality":3,"stress":1,"date":"{today}"},"via":"direct"}
+{"id":"hd40","text":"journal: today the lecture was really interesting","expect":"add_journal","args":{"text":"the lecture was really interesting"},"via":"direct"}
+{"id":"hd41","text":"mark buy groceries as done","expect":"mark_task_done","args":{"target":"buy groceries","done":true},"via":"direct"}
+{"id":"hd42","text":"push renew library books to Sunday","expect":"move_task","args":{"target":"renew library books","dueDate":"{sunday}"},"via":"direct"}
+{"id":"hd43","text":"move the calculus exam to December 5","expect":"move_exam","args":{"target":"calculus","localDate":"2026-12-05"},"via":"direct"}
+{"id":"hd44","text":"tick off read chapter 6","expect":"mark_task_done","args":{"target":"read chapter 6","done":true},"via":"direct"}
+{"id":"hd45","text":"spent 57","expect":"add_spending","args":{"amount":"57","category":"Food","date":"{today}"},"via":"question"}
+{"id":"hd46","text":"paid 19","expect":"add_spending","args":{"amount":"19","category":"Transport","date":"{today}"},"via":"question"}
+{"id":"hd47","text":"I spent 240","expect":"add_spending","args":{"amount":"240","category":"Food","date":"{today}"},"via":"question"}
+{"id":"hd48","text":"just spent 71","expect":"add_spending","args":{"amount":"71","category":"Food","date":"{today}"},"via":"question"}
+{"id":"hd49","text":"spent 8.5","expect":"add_spending","args":{"amount":"8.5","category":"Food","date":"{today}"},"via":"question"}
+{"id":"hd50","text":"paid 14","expect":"add_spending","args":{"amount":"14","category":"Food","date":"{today}"},"via":"question"}
+{"id":"hd51","text":"ate a bagel","expect":"add_meal","args":{"type":"MEAL","text":"bagel","date":"{today}"},"via":"question"}
+{"id":"hd52","text":"I ate some rice","expect":"add_meal","args":{"type":"MEAL","text":"rice","date":"{today}"},"via":"question"}
+{"id":"hd53","text":"had a sandwich","expect":"add_meal","args":{"type":"MEAL","text":"sandwich","date":"{today}"},"via":"question"}
+{"id":"hd54","text":"ate an orange","expect":"add_meal","args":{"type":"SNACK","text":"orange","date":"{today}"},"via":"question"}
+{"id":"hd55","text":"I just ate cereal","expect":"add_meal","args":{"type":"MEAL","text":"cereal","date":"{today}"},"via":"question"}
+{"id":"hd56","text":"ate two cookies","expect":"add_meal","args":{"type":"SNACK","text":"cookies","date":"{today}"},"via":"question"}
+{"id":"hd57","text":"dropped 26 on a coffee","expect":"add_spending","args":{"amount":"26","category":"Food","date":"{today}"},"via":"either"}
+{"id":"hd58","text":"that taxi ride cost me 41","expect":"add_spending","args":{"amount":"41","category":"Transport","date":"{today}"},"via":"either"}
+{"id":"hd59","text":"put renew passport on my to-do list for Sunday","expect":"create_task","args":{"title":"renew passport","dueDate":"{sunday}"},"via":"either"}
+{"id":"hd60","text":"please add a task: print the slides","expect":"create_task","args":{"title":"print the slides"},"via":"either"}
+{"id":"hd61","text":"I had pancakes for breakfast","expect":"add_meal","args":{"type":"MEAL","text":"pancakes","date":"{today}"},"via":"either"}
+{"id":"hd62","text":"munched on a few almonds","expect":"add_meal","args":{"type":"SNACK","text":"almonds","date":"{today}"},"via":"either"}
+{"id":"hd63","text":"rate me today: mood 2, energy 5, sleep 1, stress 4","expect":"add_checkin","args":{"mood":2,"energy":5,"sleepQuality":1,"stress":4,"date":"{today}"},"via":"either"}
+{"id":"hd64","text":"write this down in my journal: the group project went well","expect":"add_journal","args":{"text":"the group project went well"},"via":"either"}
+{"id":"hd65","text":"cross off buy groceries","expect":"mark_task_done","args":{"target":"buy groceries","done":true},"via":"either"}
+{"id":"hd66","text":"reschedule read chapter 5 to tomorrow","expect":"move_task","args":{"target":"read chapter 5","dueDate":"{tomorrow}"},"via":"either"}
+{"id":"hd67","text":"postpone the linear algebra exam to January 7","expect":"move_exam","args":{"target":"linear algebra","localDate":"2027-01-07"},"via":"either"}
+{"id":"hd68","text":"shelled out 75 for new shoes","expect":"add_spending","args":{"amount":"75","date":"{today}"},"via":"either"}
+{"id":"hd69","text":"grabbed a falafel for 22","expect":"add_spending","args":{"amount":"22","category":"Food","date":"{today}"},"via":"either"}
+{"id":"hd70","text":"the train ticket was 17","expect":"add_spending","args":{"amount":"17","category":"Transport","date":"{today}"},"via":"either"}
+{"id":"hd71","text":"set up a task for tomorrow: email the TA","expect":"create_task","args":{"title":"email the TA","dueDate":"{tomorrow}"},"via":"either"}
+{"id":"hd72","text":"had dinner: grilled fish and salad","expect":"add_meal","args":{"type":"MEAL","text":"grilled fish","date":"{today}"},"via":"either"}
+{"id":"hd73","text":"I should submit the lab report tomorrow","expect":"create_task","args":{"title":"submit the lab report","dueDate":"{tomorrow}"},"via":"question"}
+{"id":"hd74","text":"I have to buy a birthday present on Sunday","expect":"create_task","args":{"title":"buy a birthday present","dueDate":"{sunday}"},"via":"question"}
+{"id":"hd75","text":"I want to read chapter 7 tomorrow","expect":"create_task","args":{"title":"read chapter 7","dueDate":"{tomorrow}"},"via":"question"}
+{"id":"hd76","text":"need to pick up the package tomorrow","expect":"create_task","args":{"title":"pick up the package","dueDate":"{tomorrow}"},"via":"question"}
+{"id":"hd77","text":"I'm supposed to return the books tomorrow","expect":"create_task","args":{"title":"return the books","dueDate":"{tomorrow}"},"via":"question"}
+{"id":"hd78","text":"I would like to call the bank tomorrow","expect":"create_task","args":{"title":"call the bank","dueDate":"{tomorrow}"},"via":"question"}
+{"id":"hd79","text":"I'm going to wash the car on Sunday","expect":"create_task","args":{"title":"wash the car","dueDate":"{sunday}"},"via":"question"}
+{"id":"hd80","text":"I need to finish the physics report on Sunday","expect":"create_task","args":{"title":"finish the physics report","dueDate":"{sunday}"},"via":"question"}

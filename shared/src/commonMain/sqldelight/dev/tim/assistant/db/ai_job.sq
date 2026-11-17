@@ -1,0 +1,48 @@
+CREATE TABLE ai_job (
+    id TEXT NOT NULL PRIMARY KEY,
+    updatedAt INTEGER NOT NULL,
+    deleted INTEGER NOT NULL,
+    serverSeq INTEGER NOT NULL DEFAULT 0,
+    syncState TEXT NOT NULL,
+    kind TEXT NOT NULL,
+    inputJson TEXT NOT NULL,
+    status TEXT NOT NULL,
+    resultJson TEXT,
+    error TEXT,
+    attempts INTEGER NOT NULL,
+    createdAt INTEGER NOT NULL,
+    startedAt INTEGER
+);
+
+selectAll:
+SELECT * FROM ai_job;
+
+selectById:
+SELECT * FROM ai_job WHERE id = ?;
+
+selectPending:
+SELECT * FROM ai_job WHERE syncState = 'PENDING';
+
+upsert:
+INSERT OR REPLACE INTO ai_job VALUES ?;
+
+markSynced:
+UPDATE ai_job SET syncState = 'SYNCED' WHERE id = ? AND updatedAt = ?;
+
+markRejected:
+UPDATE ai_job SET syncState = 'REJECTED' WHERE id = ? AND updatedAt = ?;
+
+selectChangedSince:
+SELECT * FROM ai_job WHERE serverSeq > ? ORDER BY serverSeq ASC;
+
+selectOldestQueued:
+SELECT * FROM ai_job WHERE deleted = 0 AND status = 'QUEUED' ORDER BY createdAt ASC, id ASC LIMIT 1;
+
+selectStaleRunning:
+SELECT * FROM ai_job WHERE deleted = 0 AND status = 'RUNNING' AND (startedAt IS NULL OR startedAt < :cutoff) ORDER BY createdAt ASC, id ASC;
+
+selectOldestQueuedExcept:
+SELECT * FROM ai_job WHERE deleted = 0 AND status = 'QUEUED' AND kind NOT IN :kinds ORDER BY createdAt ASC, id ASC LIMIT 1;
+
+selectStaleRunningExcept:
+SELECT * FROM ai_job WHERE deleted = 0 AND status = 'RUNNING' AND kind NOT IN :kinds AND (startedAt IS NULL OR startedAt < :cutoff) ORDER BY createdAt ASC, id ASC;

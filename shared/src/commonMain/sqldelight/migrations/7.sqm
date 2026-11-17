@@ -1,0 +1,42 @@
+CREATE TABLE chat (
+    id TEXT NOT NULL PRIMARY KEY,
+    title TEXT NOT NULL,
+    created_at INTEGER NOT NULL,
+    last_used_at INTEGER NOT NULL,
+    pinned INTEGER NOT NULL DEFAULT 0,
+    archived_at INTEGER
+);
+
+CREATE TABLE chat_message (
+    id TEXT NOT NULL PRIMARY KEY,
+    chat_id TEXT NOT NULL,
+    role TEXT NOT NULL,
+    text TEXT NOT NULL,
+    card_json TEXT,
+    request_state TEXT,
+    created_at INTEGER NOT NULL
+);
+
+CREATE INDEX chat_message_chat ON chat_message(chat_id, created_at);
+
+CREATE TABLE memory_note (
+    id TEXT NOT NULL PRIMARY KEY,
+    source_chat_id TEXT NOT NULL,
+    source_chat_title TEXT NOT NULL,
+    summary TEXT,
+    state TEXT NOT NULL,
+    attempts INTEGER NOT NULL DEFAULT 0,
+    created_at INTEGER NOT NULL
+);
+
+CREATE TABLE outbox_notification (
+    id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+    kind TEXT NOT NULL,
+    title TEXT NOT NULL,
+    body TEXT NOT NULL,
+    chat_id TEXT,
+    fire_at INTEGER NOT NULL,
+    created_at INTEGER NOT NULL,
+    delivered_at INTEGER,
+    dedupe_key TEXT NOT NULL UNIQUE
+);

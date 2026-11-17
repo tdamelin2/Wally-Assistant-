@@ -1,0 +1,33 @@
+CREATE TABLE mail_item (
+    id TEXT NOT NULL PRIMARY KEY,
+    updatedAt INTEGER NOT NULL,
+    deleted INTEGER NOT NULL,
+    serverSeq INTEGER NOT NULL DEFAULT 0,
+    syncState TEXT NOT NULL,
+    gmailId TEXT NOT NULL,
+    sender TEXT NOT NULL,
+    subject TEXT NOT NULL,
+    snippet TEXT NOT NULL,
+    receivedAt INTEGER NOT NULL
+);
+
+selectAll:
+SELECT * FROM mail_item;
+
+selectById:
+SELECT * FROM mail_item WHERE id = ?;
+
+selectPending:
+SELECT * FROM mail_item WHERE syncState = 'PENDING';
+
+upsert:
+INSERT OR REPLACE INTO mail_item VALUES ?;
+
+markSynced:
+UPDATE mail_item SET syncState = 'SYNCED' WHERE id = ? AND updatedAt = ?;
+
+markRejected:
+UPDATE mail_item SET syncState = 'REJECTED' WHERE id = ? AND updatedAt = ?;
+
+selectChangedSince:
+SELECT * FROM mail_item WHERE serverSeq > ? ORDER BY serverSeq ASC;

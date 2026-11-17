@@ -1,0 +1,38 @@
+CREATE TABLE dream (
+    id TEXT NOT NULL PRIMARY KEY,
+    updatedAt INTEGER NOT NULL,
+    deleted INTEGER NOT NULL,
+    serverSeq INTEGER NOT NULL DEFAULT 0,
+    syncState TEXT NOT NULL,
+    localDate TEXT NOT NULL,
+    text TEXT NOT NULL,
+    mood INTEGER NOT NULL,
+    lucid INTEGER NOT NULL,
+    tags TEXT NOT NULL,
+    analysis TEXT,
+    analysisModel TEXT
+);
+
+selectAll:
+SELECT * FROM dream;
+
+selectById:
+SELECT * FROM dream WHERE id = ?;
+
+selectPending:
+SELECT * FROM dream WHERE syncState = 'PENDING';
+
+upsert:
+INSERT OR REPLACE INTO dream VALUES ?;
+
+markSynced:
+UPDATE dream SET syncState = 'SYNCED' WHERE id = ? AND updatedAt = ?;
+
+markRejected:
+UPDATE dream SET syncState = 'REJECTED' WHERE id = ? AND updatedAt = ?;
+
+selectChangedSince:
+SELECT * FROM dream WHERE serverSeq > ? ORDER BY serverSeq ASC;
+
+selectLast30:
+SELECT * FROM dream WHERE deleted = 0 ORDER BY localDate DESC, updatedAt DESC LIMIT 30;

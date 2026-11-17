@@ -1,0 +1,35 @@
+CREATE TABLE quiz (
+    id TEXT NOT NULL PRIMARY KEY,
+    updatedAt INTEGER NOT NULL,
+    deleted INTEGER NOT NULL,
+    serverSeq INTEGER NOT NULL DEFAULT 0,
+    syncState TEXT NOT NULL,
+    courseId TEXT NOT NULL,
+    questionsJson TEXT NOT NULL,
+    score INTEGER,
+    takenAt INTEGER
+);
+
+selectAll:
+SELECT * FROM quiz;
+
+selectById:
+SELECT * FROM quiz WHERE id = ?;
+
+selectPending:
+SELECT * FROM quiz WHERE syncState = 'PENDING';
+
+upsert:
+INSERT OR REPLACE INTO quiz VALUES ?;
+
+markSynced:
+UPDATE quiz SET syncState = 'SYNCED' WHERE id = ? AND updatedAt = ?;
+
+markRejected:
+UPDATE quiz SET syncState = 'REJECTED' WHERE id = ? AND updatedAt = ?;
+
+selectChangedSince:
+SELECT * FROM quiz WHERE serverSeq > ? ORDER BY serverSeq ASC;
+
+selectByCourse:
+SELECT * FROM quiz WHERE deleted = 0 AND courseId = ?;

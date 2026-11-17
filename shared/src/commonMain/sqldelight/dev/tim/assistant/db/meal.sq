@@ -1,0 +1,43 @@
+CREATE TABLE meal (
+    id TEXT NOT NULL PRIMARY KEY,
+    updatedAt INTEGER NOT NULL,
+    deleted INTEGER NOT NULL,
+    serverSeq INTEGER NOT NULL DEFAULT 0,
+    syncState TEXT NOT NULL,
+    type TEXT NOT NULL,
+    text TEXT NOT NULL,
+    eatenAt INTEGER NOT NULL,
+    localDate TEXT NOT NULL,
+    kcal INTEGER,
+    proteinG INTEGER,
+    carbsG INTEGER,
+    fatG INTEGER,
+    estimateModel TEXT
+);
+
+selectAll:
+SELECT * FROM meal;
+
+selectById:
+SELECT * FROM meal WHERE id = ?;
+
+selectPending:
+SELECT * FROM meal WHERE syncState = 'PENDING';
+
+upsert:
+INSERT OR REPLACE INTO meal VALUES ?;
+
+markSynced:
+UPDATE meal SET syncState = 'SYNCED' WHERE id = ? AND updatedAt = ?;
+
+markRejected:
+UPDATE meal SET syncState = 'REJECTED' WHERE id = ? AND updatedAt = ?;
+
+selectChangedSince:
+SELECT * FROM meal WHERE serverSeq > ? ORDER BY serverSeq ASC;
+
+selectNeedingEstimate:
+SELECT * FROM meal WHERE deleted = 0 AND kcal IS NULL ORDER BY eatenAt LIMIT 50;
+
+writeEstimate:
+UPDATE meal SET kcal = ?, proteinG = ?, carbsG = ?, fatG = ?, estimateModel = ?, serverSeq = ? WHERE id = ? AND updatedAt = ?;
